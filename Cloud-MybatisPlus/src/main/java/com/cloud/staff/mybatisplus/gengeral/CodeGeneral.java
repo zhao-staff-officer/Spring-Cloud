@@ -22,7 +22,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 public class CodeGeneral {
 	//jdbc
 	private static final String Driver_Name="com.mysql.jdbc.Driver";
-	private static final String Url="jdbc:mysql://182.150.59.121:2236/db_sr?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
+	private static final String Url="jdbc:mysql://localhost:3306/db_sr?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
 	private static final String User_Name="user_istore";
 	private static final String Pass_Word="istore";
 	//输出路径
