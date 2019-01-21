@@ -1,7 +1,7 @@
 # Spring-Cloud
 微服务集成
 
-主要内容包括： 
+主要内容包括：   
 注册中心Eureka  
 配置中心Config  
 网关ZUUL：代理，限流  
