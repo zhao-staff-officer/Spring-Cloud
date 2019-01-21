@@ -32,6 +32,7 @@
 	  <module>Cloud-Config</module>
 	  <module>Cloud-FastDFS</module>
 	  <module>Cloud-Apollo</module>
+	  <module>Cloud-MybatisPlus</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->
