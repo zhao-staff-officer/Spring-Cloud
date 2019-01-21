@@ -9,34 +9,4 @@ zuul:
             quota: 400   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
             refresh-interval: 60 # 单位时间设置
             type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        dockhospital: 
-            limit: 10   # 单位时间内允许访问的个数
-            quota: 20   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        user: 
-            limit: 200   # 单位时间内允许访问的个数
-            quota: 400  # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        Inquiry: 
-            limit: 10   # 单位时间内允许访问的个数
-            quota: 20   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        reservation: 
-            limit: 10   # 单位时间内允许访问的个数
-            quota: 20   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        nursing: 
-            limit: 10   # 单位时间内允许访问的个数
-            quota: 20   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
-        pay: 
-            limit: 10   # 单位时间内允许访问的个数
-            quota: 20   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
-            refresh-interval: 60 # 单位时间设置
-            type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
         
