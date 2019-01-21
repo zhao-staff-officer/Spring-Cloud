@@ -1,0 +1,39 @@
+server:
+  port: 9000 #配置项目端口号
+spring:
+  application:
+    name: cloud-eureka #项目名称
+  security:
+    user:  #安全认证用户信息
+      name: staff
+      password: staff
+      roles: staff
+eureka: 
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30 #定义服务续约任务（心跳）的调用间隔，单位：秒
+    lease-expiration-duration-in-seconds: 90  #定义服务失效的时间，单位：秒
+  client:
+    register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。
+    fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true。
+    registry-fetch-interval-seconds: 30 #从Eureka服务器端获取注册信息的间隔时间，单位：秒
+    eureka-server-connect-timeout-seconds:  5 #连接 Eureka Server 的超时时间，单位：秒
+    eureka-server-read-timeout-seconds: 8 # 读取 Eureka Server 信息的超时时间，单位：秒
+    eureka-connection-idle-timeout-seconds: 30 #Eureka 服务端连接空闲关闭时间，单位：秒
+    eureka-server-total-connections: 200 #从Eureka 客户端到所有Eureka服务端的连接总数
+    eureka-server-total-connections-per-host: 50 #从Eureka客户端到每个Eureka服务主机的连接总数
+    serviceUrl:  #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔。
+      defaultZone: http://staff:staff@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false #关闭自我保护
+      
+logging: 
+  path: /mnt/logs/eureka #日志输出位置
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #控制台日志数据格式
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #输出格式
+    dateformat: yyyy-MM-dd HH:mm:ss #日志时间格式
+    level: INFO  #日志输出级别
+  file:
+    max-size: 500MB
+    max-history: 1

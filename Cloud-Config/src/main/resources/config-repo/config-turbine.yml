@@ -1,0 +1,7 @@
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: management,dockhospital,user,Inquiry,reservation,nursing,pay
+  clusterNameExpression: new String("default")
+  instanceUrlSuffix: 
+    default: /actuator/hystrix.stream

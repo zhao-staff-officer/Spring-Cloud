@@ -1,0 +1,11 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        #hystrix.stream
+  endpoint:
+    health:
+      show-details: ALWAYS
+  security:
+    enabled: false #刷新时关闭安全验证
