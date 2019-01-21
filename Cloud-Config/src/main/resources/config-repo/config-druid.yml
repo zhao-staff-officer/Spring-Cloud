@@ -1,3 +1,4 @@
+#druid数据库连接池
 spring: 
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver #mysql驱动
