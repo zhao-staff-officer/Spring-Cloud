@@ -10,29 +10,6 @@ zuul:
       path: /api/** #后台管理服务
       serviceId: management
       custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    dockhospital: 
-      path: /dockhospital/** #对接医院服务
-      serviceId: dockhospital 
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    user: 
-      path: /user/** #用户服务
-      serviceId: user 
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    Inquiry: 
-      path: /Inquiry/** #问诊服务
-      serviceId: Inquiry 
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    reservation: 
-      path: /reservation/** #预约服务
-      serviceId: reservation 
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    nursing: 
-      path: /nursing/** #护理服务
-      serviceId: nursing 
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
-    pay: 
-      path: /pay/** #支付服务
-      serviceId: pay 
       custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
   add-host-header: true
   host:
