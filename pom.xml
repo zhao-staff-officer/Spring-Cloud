@@ -12,11 +12,11 @@
 	<description>微服务</description>
 	
 	
-	<!-- springboot版本：2.1.1.RELEASE，springCloud版本：Finchley.SR1 -->
+	<!-- springboot版本：2.0.4.RELEASE，springCloud版本：Finchley.SR1 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.1.RELEASE</version>
+		<version>2.0.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
@@ -30,6 +30,7 @@
 	<modules>
 	  <module>Cloud-Eureka</module>
 	  <module>Cloud-Config</module>
+	  <module>Cloud-Zuul</module>
 	  <module>Cloud-FastDFS</module>
 	  <module>Cloud-Apollo</module>
 	  <module>Cloud-MybatisPlus</module>

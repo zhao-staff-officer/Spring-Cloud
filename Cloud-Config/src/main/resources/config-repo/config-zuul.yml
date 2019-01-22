@@ -6,10 +6,9 @@ spring:
       max-request-size: 200MB
 zuul:
   routes:
-    basicApi:
-      path: /api/** #后台管理服务
+    api: 
+      path: /api/** #验证服务
       serviceId: api
-      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
       custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
   add-host-header: true
   host:
