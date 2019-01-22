@@ -8,6 +8,9 @@ spring:
       name: staff
       password: staff
       roles: staff
+  mvc:
+    favicon:
+      enabled: false #去除浏览器叶子图标
 eureka: 
   instance:
     hostname: localhost
