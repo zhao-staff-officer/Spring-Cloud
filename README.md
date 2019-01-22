@@ -1,21 +1,50 @@
 # Spring-Cloud
-微服务集成
+# 微服务搭建
+   
+## Eureka：注册中心√
+## Configg：配置中心√
+## ZUUL：网关
+- **rabbion**：负载均衡策略×
+- **routes**：路由规则√
+- **ratelimit**：服务限流√
+- **jwt+security**：权限验证×
+## Hystrix：熔断
+- **服务调用**：feign×
+- **隔离策略**：线程池隔离，信号量隔离×
+- **熔断**：熔断策略配置×
+- **降级**：服务降级×
+- **缓存/请求合并**：×
+- **服务监控**：Hystrix-Dashboard×
+## Sleuth：链路追踪
+- **zipkin+mysql**:单数据库直接存放mysql×
+- **zipkin+rabbitmq**:分布式数据聚合汇总×
+## FastDFS：分布式文件存储系统×
+## Mybatis-Plus：插件与代码生成器√
+## druid：数据库连接池√
+## redis：缓存
+- **持久化**：rdb,aof,rdb+aof
+- **复制**：Master+Cluter
+- **过期策略**：volatile-lru，volatile-lfu，volatile-random，volatile-ttl，allkeys-lru，allkeys-lfu，allkeys-random，noeviction
+- **集群去中心化/数据转移**：redis-cluter
+- **缓存信息**：info
+## kafka
+- **重平衡**
+## RabbitMQ
+## RocketMQ
+## Mysql
+## mycat：数据库中间件
+## sharding：数据库中间件
+## MongoDB
+## TiDB
+## elasticsearch:搜索引擎
+- **elasticsearch-head**：搜索可视化
+- **es_ik**：中文分词器
+- **go-mysql-elasticsearch**：数据同步 
+## docker+jenkins：敏捷部署
+## Apollo 配置中心
+## xxjob 定时任务
 
-主要内容包括：   
-注册中心Eureka  
-配置中心Config  
-网关ZUUL：代理，限流  
-分布式文件存储：FastDFS  
-MyBatis-Plus代码生成器  
-druid数据连接池  
-redis集群：单机/集群  
-中间件kafka：单机/集群  
-中间件RocketMQ  
-中间件RabbitMQ  
-数据库mysql  
-数据库中间件:mycat/sharding  
-NOSQL:mongodb  
-NEWSQL:TiDB  
-elasticsearch+elasticsearch-head+es_ik+go-mysql-elasticsearch数据同步  
-docker+jenkins  
-Apollo配置中心  
+#打√滴是系统已有集成，打×滴等我慢慢补吧！有些是文档与系统结合一起才有用：如中间件、数据库、搜索引擎、开源项目等。
+#需要文档邮件1519632744@163.
+
+
