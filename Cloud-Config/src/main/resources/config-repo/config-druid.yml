@@ -61,6 +61,6 @@ spring:
         #deny: 172.16.0.21,172.16.0.22,172.16.0.23,172.16.0.24 #允许登录ip,deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝。
         #allow: 172.16.0.21,172.16.0.22,172.16.0.23,172.16.0.24 #允许登录ip,deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝。
         reset-enable: true #清空统计数据
-        login-username: kentrasoft #登录用户
-        login-password: kentrasoft #登录密码
+        login-username: staff #登录用户
+        login-password: staff #登录密码
         url-pattern: /druid/*

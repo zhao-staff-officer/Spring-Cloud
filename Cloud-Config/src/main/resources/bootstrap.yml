@@ -10,13 +10,16 @@ spring:
       name: staff
       password: staff
   cloud:
-    bus:
+    bus: 
       trace:
         enabled: true #开启消息跟踪事件
     config:
       server:
          native:
           search-locations: classpath:/config-repo/ #配置地址
+  mvc:
+    favicon:
+      enabled: false #去除浏览器叶子
 management:
   endpoints:
     web:
