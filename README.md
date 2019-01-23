@@ -7,7 +7,7 @@
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
 - **ratelimit**：服务限流√
-- **jwt+security**：权限验证×
+- **jwt+security**：权限验证√
 ## Hystrix：熔断
 - **服务调用**：feign×
 - **隔离策略**：线程池隔离，信号量隔离×
