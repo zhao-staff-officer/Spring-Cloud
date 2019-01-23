@@ -34,6 +34,8 @@
 	  <module>Cloud-FastDFS</module>
 	  <module>Cloud-Apollo</module>
 	  <module>Cloud-MybatisPlus</module>
+	  <module>Cloud-ApiFirst</module>
+	  <module>Cloud-ApiSecond</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->
