@@ -2,12 +2,12 @@
 # 微服务搭建
    
 ## Eureka：注册中心√
-## Configg：配置中心√
+## Config：配置中心√
 ## ZUUL：网关
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
 - **ratelimit**：服务限流√
-- **jwt+security**：权限验证×
+- **jwt+security**：权限验证√
 ## Hystrix：熔断
 - **服务调用**：feign×
 - **隔离策略**：线程池隔离，信号量隔离×
@@ -18,6 +18,7 @@
 ## Sleuth：链路追踪
 - **zipkin+mysql**:单数据库直接存放mysql×
 - **zipkin+rabbitmq**:分布式数据聚合汇总×
+## Swagger:接口调试工具
 ## FastDFS：分布式文件存储系统×
 ## Mybatis-Plus：插件与代码生成器√
 ## druid：数据库连接池√
