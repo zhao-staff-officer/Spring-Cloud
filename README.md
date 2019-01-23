@@ -2,7 +2,7 @@
 # 微服务搭建
    
 ## Eureka：注册中心√
-## Configg：配置中心√
+## Config：配置中心√
 ## ZUUL：网关
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
