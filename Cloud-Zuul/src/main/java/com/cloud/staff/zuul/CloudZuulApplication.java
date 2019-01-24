@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages= {"com.cloud.staff.zuul","com.cloud.staff.common"}) //全局扫描
 @EnableEurekaClient
 @EnableZuulProxy
 @EnableSwagger2

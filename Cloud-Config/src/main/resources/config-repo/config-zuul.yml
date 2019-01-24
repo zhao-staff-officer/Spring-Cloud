@@ -4,9 +4,9 @@ spring:
       enabled: true
       max-file-size: 20MB
       max-request-size: 200MB
-zuul:
+zuul: 
   routes:
-    apisecond: 
+    apifirst: 
       path: /apifirst/** #验证服务
       serviceId: apifirst
       custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
@@ -29,7 +29,7 @@ ribbon: #超时设置
   SocketTimeout: 10000
   
 logging: 
-  path: /mnt/logs/gateway #日志输出位置
+  path: /mnt/logs/zuul #日志输出位置
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #控制台日志数据格式
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #输出格式

@@ -3,8 +3,8 @@ spring:
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver #mysql驱动
     url: jdbc:mysql://localhost:3306/db_sr?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
-    username: user_istore #测试
-    password: istore #测试
+    username: root #测试
+    password: zhao4443 #测试
     type: com.alibaba.druid.pool.DruidDataSource
     druid: 
       #连接池配置

@@ -14,8 +14,8 @@ spring:
       profile: sleuth,management
       label: master
       fail-fast: true
-      username: inthospital
-      password: inthospital
+      username: staff
+      password: staff
       retry:
         max-attempts: 6 #配置重试次数，默认为6
         multiplier: 1.1 # 间隔乘数，默认1.1
@@ -41,7 +41,7 @@ eureka:
     eureka-server-total-connections: 200 #从Eureka 客户端到所有Eureka服务端的连接总数
     eureka-server-total-connections-per-host: 50 #从Eureka客户端到每个Eureka服务主机的连接总数
     serviceUrl:
-      defaultZone: http://staff:staff@172.16.4.5:9000/eureka/
+      defaultZone: http://staff:staff@localhost:9000/eureka/
       
     
 

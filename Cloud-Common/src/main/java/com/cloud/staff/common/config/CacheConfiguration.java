@@ -1,4 +1,4 @@
-package com.cloud.staff.zuul.config;
+package com.cloud.staff.common.config;
 
 import java.io.Serializable;
 import java.time.Duration;

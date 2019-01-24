@@ -11,7 +11,7 @@ spring:
         enabled: true
         serviceId: config
       name: config
-      profile: zuul,management,redis,ratelimit #这里可以直接指定config配置文档
+      profile: zuul,management,redis,ratelimit,druid #这里可以直接指定config配置文档
       label: master
       fail-fast: true
       username: staff
