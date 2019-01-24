@@ -36,6 +36,8 @@
 	  <module>Cloud-MybatisPlus</module>
 	  <module>Cloud-ApiFirst</module>
 	  <module>Cloud-ApiSecond</module>
+	  <module>Cloud-Monitor</module>
+	  <module>Cloud-Common</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->
