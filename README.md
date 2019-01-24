@@ -16,7 +16,7 @@
 - **缓存/请求合并**：×
 - **服务监控**：Hystrix-Dashboard×
 ## Sleuth：链路追踪
-- **zipkin+mysql**:单数据库直接存放mysql×
+- **zipkin+mysql**:数据库链路追踪×
 - **zipkin+rabbitmq**:分布式数据聚合汇总×
 ## Swagger:接口调试工具
 ## FastDFS：分布式文件存储系统×
