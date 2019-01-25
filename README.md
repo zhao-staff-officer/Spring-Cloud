@@ -18,7 +18,7 @@
 ## Sleuth：链路追踪
 - **zipkin+mysql**:数据库链路追踪×
 - **zipkin+rabbitmq**:分布式数据聚合汇总×
-## Swagger:接口调试工具
+## Swagger:接口调试工具√
 ## FastDFS：分布式文件存储系统×
 ## Mybatis-Plus：插件与代码生成器√
 ## druid：数据库连接池√
