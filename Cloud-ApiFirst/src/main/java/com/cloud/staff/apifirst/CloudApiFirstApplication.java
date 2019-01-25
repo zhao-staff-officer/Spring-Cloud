@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication(scanBasePackages= {"com.cloud.staff.apifirst","com.cloud.staff.common"})
+@SpringBootApplication(scanBasePackages= {"com.cloud.staff.apifirst","com.cloud.staff.common"})//指定扫描路径
 @EnableEurekaClient
 @EnableFeignClients
 @EnableHystrix

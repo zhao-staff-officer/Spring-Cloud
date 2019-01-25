@@ -1,5 +1,5 @@
 server:
-  port: 9040 #服务地址
+  port: 9050 #服务地址
   tomcat:
     basedir: /mnt/tomcat/fileupload #文件上传临时目录
 spring:
@@ -11,11 +11,11 @@ spring:
         enabled: true
         serviceId: config
       name: config
-      profile: sleuth,management
+      profile: sleuth,management,druid,mybatisPlus,logs
       label: master
       fail-fast: true
-      username: inthospital
-      password: inthospital
+      username: staff
+      password: staff
       retry:
         max-attempts: 6 #配置重试次数，默认为6
         multiplier: 1.1 # 间隔乘数，默认1.1

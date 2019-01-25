@@ -11,7 +11,7 @@ spring:
         enabled: true
         serviceId: config
       name: config
-      profile: sleuth,management
+      profile: sleuth,management,druid,mybatisPlus,logs
       label: master
       fail-fast: true
       username: staff
