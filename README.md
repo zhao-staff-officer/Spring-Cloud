@@ -1,7 +1,7 @@
 # Spring-Cloud
 # 微服务搭建
    
-## Eureka：注册中心√/nacos×/apollo×
+## Eureka√/nacos×/apollo×：注册中心
 ## Config：配置中心√
 ## ZUUL：网关
 - **rabbion**：负载均衡策略×
@@ -21,7 +21,7 @@
 ## FastDFS：分布式文件存储系统√
 ## Mybatis-Plus：插件与代码生成器√
 ## druid：数据库连接池√
-## redis：缓存√/codis×
+## redis√/codis×：缓存
 - **持久化**：rdb,aof,rdb+aof
 - **复制**：Master+Cluter
 - **过期策略**：volatile-lru，volatile-lfu，volatile-random，volatile-ttl，allkeys-lru，allkeys-lfu，allkeys-random，noeviction
