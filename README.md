@@ -1,8 +1,8 @@
 # Spring-Cloud
 # 微服务搭建
    
-## Eureka√/nacos×/apollo×：注册中心
-## Config：配置中心√
+## Eureka√：注册中心
+## Config√/nacos×/apollo×：配置中心
 ## ZUUL：网关
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
