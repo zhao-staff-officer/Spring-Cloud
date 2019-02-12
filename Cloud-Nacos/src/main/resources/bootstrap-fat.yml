@@ -1,0 +1,25 @@
+server: 
+  port: 9001
+#注：ancos data-id识别配置文件为  ${prefix}-${spring.profile.active}.${file-extension}  
+#如不设置{spring.cloud.nacos.config.prefix}默认为{spring.application.name}
+spring:
+  application:
+    name: service1
+  cloud:
+    nacos: 
+      discovery: 
+        server-addr: localhost:8848
+        #namespace: ba490117-7547-4675-93d1-7f4907e28910
+      config: 
+        server-addr: localhost:8848
+        prefix: config
+        namespace: ba490117-7547-4675-93d1-7f4907e28910 #指定命名空间 使用id
+        file-extension: yaml #指定配置类型
+  profiles: 
+    active: service1
+
+    
+    
+        
+        
+      
