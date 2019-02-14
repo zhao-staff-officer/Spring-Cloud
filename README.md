@@ -27,7 +27,7 @@
 - **过期策略**：volatile-lru，volatile-lfu，volatile-random，volatile-ttl，allkeys-lru，allkeys-lfu，allkeys-random，noeviction
 - **集群去中心化/数据转移**：redis-cluter
 - **缓存信息**：info
-## kafka
+## kafka √
 - **重平衡**
 ## RabbitMQ
 ## RocketMQ
@@ -36,13 +36,13 @@
 ## sharding：数据库中间件
 ## MongoDB
 ## TiDB
-## elasticsearch:搜索引擎
+## elasticsearch:搜索引擎 √
 - **elasticsearch-head**：搜索可视化
 - **es_ik**：中文分词器
 - **go-mysql-elasticsearch**：数据同步 
 ## docker+jenkins：敏捷部署
-## xxjob 定时任务
-## nacos Ali开源注册配置中心
+## xxjob 定时任务√
+## nacos Ali开源注册配置中心√
 
 #打√滴是系统已有集成，打×滴等我慢慢补吧！有些是文档与系统结合一起才有用：如中间件、数据库、搜索引擎、开源项目等。
 需要文档邮件15196332744@163.com
