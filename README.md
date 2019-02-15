@@ -2,7 +2,7 @@
 # 微服务搭建
    
 ## Eureka√：注册中心
-## Config√/nacos×/apollo×：配置中心
+## Config√/nacos√/apollo√：配置中心
 ## ZUUL：网关
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
@@ -40,9 +40,8 @@
 - **elasticsearch-head**：搜索可视化
 - **es_ik**：中文分词器
 - **go-mysql-elasticsearch**：数据同步 
-## docker+jenkins：敏捷部署
+## docker+jenkins：敏捷部署√
 ## xxjob 定时任务√
-## nacos Ali开源注册配置中心√
 
 #打√滴是系统已有集成，打×滴等我慢慢补吧！有些是文档与系统结合一起才有用：如中间件、数据库、搜索引擎、开源项目等。
 需要文档邮件15196332744@163.com
