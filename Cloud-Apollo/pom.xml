@@ -52,6 +52,27 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <dockerHost>http://192.168.33.21:2375</dockerHost>
+                    <imageName>192.168.33.21:5000/${project.artifactId}</imageName>
+                    <baseImage>java:8</baseImage>
+                    <entryPoint>["java","-jar","${project.artifactId}-${project.version}.jar"]</entryPoint>
+                    <!--并没有采用dockerfile的方式，dockerfile和xxx.sh没有使用过-->
+                    <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.artifactId}-${project.version}.jar</include>
+                        </resource>
+                    </resources>
+                    <pushImage>true</pushImage>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
