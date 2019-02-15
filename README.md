@@ -1,9 +1,9 @@
 # Spring-Cloud
 # 微服务搭建
    
-## Eureka√：注册中心
+## Eureka√/consul：注册中心
 ## Config√/nacos√/apollo√：配置中心
-## ZUUL：网关
+## ZUUL√/gateway：网关
 - **rabbion**：负载均衡策略×
 - **routes**：路由规则√
 - **ratelimit**：服务限流√
@@ -27,15 +27,10 @@
 - **过期策略**：volatile-lru，volatile-lfu，volatile-random，volatile-ttl，allkeys-lru，allkeys-lfu，allkeys-random，noeviction
 - **集群去中心化/数据转移**：redis-cluter
 - **缓存信息**：info
-## kafka √
-- **重平衡**
-## RabbitMQ
-## RocketMQ
-## Mysql
-## mycat：数据库中间件
-## sharding：数据库中间件
-## MongoDB
-## TiDB
+## kafka √/RabbitMQ/RocketMQ/flumn：消息中间件
+- **kafka重平衡**
+## Mysql/MongoDB/TiDB：数据库
+## mycat/sharding：数据库中间件
 ## elasticsearch:搜索引擎 √
 - **elasticsearch-head**：搜索可视化
 - **es_ik**：中文分词器
