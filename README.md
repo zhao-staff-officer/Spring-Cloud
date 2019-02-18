@@ -21,7 +21,7 @@
 ## FastDFS：分布式文件存储系统√
 ## Mybatis-Plus：插件与代码生成器√
 ## druid：数据库连接池√
-## redis√/codis×：缓存
+## redis√/redisManager/codis×：缓存
 - **持久化**：rdb,aof,rdb+aof
 - **复制**：Master+Cluter
 - **过期策略**：volatile-lru，volatile-lfu，volatile-random，volatile-ttl，allkeys-lru，allkeys-lfu，allkeys-random，noeviction
