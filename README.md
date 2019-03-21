@@ -9,12 +9,12 @@
 - **routes**：路由规则√
 - **ratelimit**：服务限流√
 - **jwt+security**：权限验证√
-## Hystrix：熔断
+## Hystrix√/Sentinel：熔断
 - **服务调用**：feign√
 - **隔离策略**：线程池隔离，信号量隔离√
 - **熔断**：熔断策略配置√
 - **降级**：服务降级√
-- **服务监控**：Hystrix-Dashboard×
+- **服务监控**：Hystrix-Dashboard√
 ## Sleuth：链路追踪
 - **zipkin+mysql**:数据库链路追踪√
 - **zipkin+rabbitmq**:分布式数据聚合汇总√
