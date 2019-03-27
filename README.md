@@ -15,7 +15,7 @@
 - **熔断**：熔断策略配置√
 - **降级**：服务降级√
 - **服务监控**：Hystrix-Dashboard√
-## Sleuth：链路追踪
+## Sleuth√/skyWalking/pinpoint：链路追踪
 - **zipkin+mysql**:数据库链路追踪√
 - **zipkin+rabbitmq**:分布式数据聚合汇总√
 ## Swagger:接口调试工具√
