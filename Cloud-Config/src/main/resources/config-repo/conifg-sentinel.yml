@@ -1,0 +1,25 @@
+spring: 
+  cloud:
+    sentinel:
+      enabled: true #Sentinel自动化配置是否生效
+      eager: false #取消Sentinel控制台懒加载
+      transport:
+        port: 8719 #应用与Sentinel控制台交互的端口，应用本地会起一个该端口占用的HttpServer
+        dashboard: http://192.168.33.21:8786 #Sentinel 控制台地址
+        heartbeat-interval-ms: 5000 #应用与Sentinel控制台的心跳间隔时间
+        #client-ip: #此配置的客户端IP将被注册到 Sentinel Server 端 
+      #filter: 
+        #enabled: true #Enable to instance CommonFilter
+        #order: Integer.MIN_VALUE #Servlet Filter的加载顺序。Starter内部会构造这个filter
+        #url-patterns: /* #数据类型是数组。表示Servlet Filter的url pattern集合
+      metric:
+        charset: UTF-8 #metric文件字符集
+        file-single-size: 100M #Sentinel metric 单个文件的大小
+        file-total-count: 10 #Sentinel metric 总文件数量
+      log:
+        dir: /mnt/sentinel #Sentinel 日志文件所在的目录
+        switch-pid: false #Sentinel 日志文件名是否需要带上pid
+      #servlet:
+        #block-page: #自定义的跳转 URL，当请求被限流时会自动跳转至设定好的 URL
+      flow:
+        cold-factor: 3 #冷启动因子 预热

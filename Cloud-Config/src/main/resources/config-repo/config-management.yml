@@ -2,7 +2,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: '*' #路径为 /actuator/sentinel
         #hystrix.stream
   endpoint:
     health:
