@@ -9,7 +9,7 @@ spring:
         enabled: true
         service-id: config
       name: config
-      profile: management,sentinel
+      profile: management
       label: master
       fail-fast: true
       username: staff
