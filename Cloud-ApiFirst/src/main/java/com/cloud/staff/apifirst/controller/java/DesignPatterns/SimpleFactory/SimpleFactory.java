@@ -12,7 +12,8 @@ public class SimpleFactory {
 	
 	public static void main(String[] args) {
 		SimpleFactory simpleFactory=new SimpleFactory();
-		SimpleFactory.creatProduct(1);
+		Product operInstance=SimpleFactory.creatProduct(2);
+		operInstance.operation();
 	}
 
 }

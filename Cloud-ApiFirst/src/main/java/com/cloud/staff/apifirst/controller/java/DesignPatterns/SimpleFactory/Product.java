@@ -8,5 +8,5 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.SimpleFactory;
  *
  */
 public interface Product{
-    
+    void operation();
 }
