@@ -16,7 +16,7 @@
 - **熔断**：熔断策略配置√
 - **降级**：服务降级√
 - **服务监控**：Hystrix-Dashboard√
-- **Sentinel与apollo数据持久化√
+- **Sentinel与apollo**：数据持久化√
 ## Sleuth√/skyWalking/pinpoint：链路追踪
 - **zipkin+mysql**:数据库链路追踪√
 - **zipkin+rabbitmq**:分布式数据聚合汇总√
