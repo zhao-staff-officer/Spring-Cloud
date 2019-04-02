@@ -4,8 +4,7 @@ public class SubOperation implements MethodFactory{
 
 	@Override
 	public void operation() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("减法");
 	}
 
 }
