@@ -2,6 +2,8 @@ package com.cloud.staff.apifirst.controller.java.Spring.Copy;
 
 import java.util.Date;
 
+import com.cloud.staff.apifirst.controller.java.Basic.copy.Student;
+
 public class LfProduct {
 	/* 产品id */
     private String lfProductId;
@@ -44,6 +46,9 @@ public class LfProduct {
     private Date inputDate;
     /* 记录更新时间 */
     private Date stampDate;
+    
+    private Student student;
+    
 	public String getLfProductId() {
 		return lfProductId;
 	}
@@ -163,6 +168,12 @@ public class LfProduct {
 	}
 	public void setStampDate(Date stampDate) {
 		this.stampDate = stampDate;
+	}
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
 	}
     
     

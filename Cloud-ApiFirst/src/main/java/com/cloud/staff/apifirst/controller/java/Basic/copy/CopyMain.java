@@ -27,7 +27,7 @@ package com.cloud.staff.apifirst.controller.java.Basic.copy;
  */
 public class CopyMain {
 	public static void main(String[] args) {
-		Student s=new Student();
+		Student s=new Student("张三","10");
 		Student s2=(Student)s.clone();
 		System.out.println(s);
 	    System.out.println(s2);

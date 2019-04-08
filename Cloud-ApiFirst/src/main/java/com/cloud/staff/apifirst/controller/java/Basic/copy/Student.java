@@ -5,6 +5,11 @@ public class Student implements Cloneable{
 	private String name;
 	
 	private String age;
+	
+	public Student(String name,String age){
+		this.name=name;
+		this.age=age;
+	}
 
 	public String getName() {
 		return name;
@@ -32,6 +37,11 @@ public class Student implements Cloneable{
 			e.printStackTrace();
 		}
 		return obj;
+	}
+	
+	@Override
+	public String toString() {
+		return "输出："+name+","+age;
 	}
 	
 	

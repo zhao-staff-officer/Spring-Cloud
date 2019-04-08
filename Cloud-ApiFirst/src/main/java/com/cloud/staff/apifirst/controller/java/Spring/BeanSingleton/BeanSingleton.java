@@ -23,7 +23,7 @@ public class BeanSingleton {
 	
 	
 //	源码分析：
-//	
+//	总结：synchronized修饰的双重校验锁，维护一个hashmap注册表
 //	@Override
 //	public void registerSingleton(String beanName, Object singletonObject) throws IllegalStateException {
 //		super.registerSingleton(beanName, singletonObject);
