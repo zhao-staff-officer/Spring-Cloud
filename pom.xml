@@ -39,7 +39,8 @@
 	  <module>Cloud-Monitor</module>
 	  <module>Cloud-Common</module>
 	  <module>Cloud-Nacos</module>
-	  <module>Cloud-sentinel</module>
+	  <module>Cloud-Sentinel</module>
+	  <module>Cloud-ELK</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->
