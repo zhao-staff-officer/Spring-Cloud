@@ -20,6 +20,8 @@
 ## Sleuth√/skyWalking/pinpoint：链路追踪
 - **zipkin+mysql**:数据库链路追踪√
 - **zipkin+rabbitmq**:分布式数据聚合汇总√
+## ELK日志收集系统
+- **filebeat+kafka+logstash+es+kibana
 ## Swagger:接口调试工具√
 ## FastDFS：分布式文件存储系统√
 ## Mybatis-Plus：插件与代码生成器√
