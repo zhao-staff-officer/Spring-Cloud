@@ -21,7 +21,8 @@
 - **zipkin+mysql**:数据库链路追踪√
 - **zipkin+rabbitmq**:分布式数据聚合汇总√
 ## ELK日志收集系统
-- **filebeat+kafka+logstash+es+kibana
+- **filebeat+kafka+logstash+es+kibana**：
+    filebeat日志文件读取，kafka数据缓存，logstash数据清洗，es数据存储，kibana数据展示
 ## Swagger:接口调试工具√
 ## FastDFS：分布式文件存储系统√
 ## Mybatis-Plus：插件与代码生成器√
