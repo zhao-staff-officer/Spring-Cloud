@@ -8,5 +8,13 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.ChainOfResponsib
  *
  */
 public class ChainOfResponsibilityMain {
+	
+	public static void main(String[] args) {
+		String msg="我日，尼玛，你爸，测试";
+		FilterChain chain=new FilterChain();
+		chain.addFilter(new FilterOne()).addFilter(new FilterTwo());
+		msg=chain.doFilter(msg);
+		System.out.println(msg);
+	}
 
 }
