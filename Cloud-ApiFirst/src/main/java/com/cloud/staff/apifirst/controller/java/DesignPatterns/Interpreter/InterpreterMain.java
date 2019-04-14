@@ -1,6 +1,5 @@
 package com.cloud.staff.apifirst.controller.java.DesignPatterns.Interpreter;
 
-import java.util.StringTokenizer;
 
 /**
  * 解释器
