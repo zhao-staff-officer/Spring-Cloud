@@ -34,8 +34,8 @@
 	  <module>Cloud-FastDFS</module>
 	  <module>Cloud-Apollo</module>
 	  <module>Cloud-MybatisPlus</module>
-	  <module>Cloud-ApiFirst</module>
-	  <module>Cloud-ApiSecond</module>
+	  <module>Cloud-Service</module>
+	  <module>Cloud-Service-Basics</module>
 	  <module>Cloud-Monitor</module>
 	  <module>Cloud-Common</module>
 	  <module>Cloud-Nacos</module>
