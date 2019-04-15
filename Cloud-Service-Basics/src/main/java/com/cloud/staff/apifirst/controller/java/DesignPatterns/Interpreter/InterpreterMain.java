@@ -11,6 +11,17 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.Interpreter;
 public class InterpreterMain {
 	public static void main(String[] args) {
 		
+		TerminalExpression trma=new TerminalExpression("a");
+		TerminalExpression trmb=new TerminalExpression("b");
+		TerminalExpression trmc=new TerminalExpression("c");
+		TerminalExpression trmd=new TerminalExpression("d");
+		
+		Expression ordbc =new OrExpress(trmb, trmc);
+		Expression ordabc =new AndExpress(trma, ordbc);
+		Expression anddabc =new AndExpress(trmd, ordabc);
+		
+		System.out.println(anddabc.interpret("A B"));
+		
 	}
 
 }
