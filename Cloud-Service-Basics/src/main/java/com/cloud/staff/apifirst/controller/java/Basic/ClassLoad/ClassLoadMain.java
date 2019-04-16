@@ -14,6 +14,16 @@ package com.cloud.staff.apifirst.controller.java.Basic.ClassLoad;
  * JNDI,JDBC,JCE、JAXB,JBI等
  */
 public class ClassLoadMain {
-	
-
+//	验证加载器
+	public static void main(String[] args) {
+		ClassLoader c=ClassLoadMain.class.getClassLoader();
+		System.out.println(c);
+		ClassLoader c1=c.getParent();
+		System.out.println(c1);
+		ClassLoader c2=c1.getParent();
+//		System.out.println(c2);
+//		sun.misc.Launcher$AppClassLoader@764c12b6
+//		sun.misc.Launcher$ExtClassLoader@449b2d27
+//		null
+	}
 }
