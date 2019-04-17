@@ -22,7 +22,25 @@
 		<dependency>  
 	        <groupId>org.springframework.boot</groupId>  
 	        <artifactId>spring-boot-starter-web</artifactId>
+	        <!-- 默认门面模式：SLF4+Logback -->
+            <!-- 去除logging默认日志系统实现 -->
+	        <exclusions>
+	        	<exclusion>
+	        		<groupId>org.springframework.boot</groupId>
+	        		<artifactId>spring-boot-starter-logging</artifactId>
+	        	</exclusion>
+	        </exclusions>
 		</dependency>
+        <!-- 添加log4j2日志实现 -->
+        <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+		
 		<!-- 集成logstash -->
 		<dependency>
             <groupId>net.logstash.logback</groupId>
