@@ -11,7 +11,7 @@ import sun.reflect.Reflection;
  * @author zhaoHB
  *
  */
-public class ClassForNameAndClassLoad {
+public class ClassForName {
 	
 	//静态代码块 -执行时间-JVM初始化
 	static {
@@ -23,7 +23,7 @@ public class ClassForNameAndClassLoad {
 		System.out.println("构造代码块");
 	}
 	//构造函数-执行时间-实例化对象,优先级小于构造代码块
-	public ClassForNameAndClassLoad() {
+	public ClassForName() {
 		System.out.println("构造函数");
 	}
 	
