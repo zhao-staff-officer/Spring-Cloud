@@ -47,7 +47,4 @@
 #打√滴是系统已有集成，打×滴等我慢慢补吧！有些是文档与系统结合一起才有用：如中间件、数据库、搜索引擎、开源项目等。
 需要文档邮件15196332744@163.com
 
-##图片展示
-![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-sentinel/SentinelConsole.png)
-![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-sentinel/SentinelDesign.png)
 
