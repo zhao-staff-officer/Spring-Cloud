@@ -49,5 +49,5 @@
 
 ##图片展示
 ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-sentinel/SentinelConsole.png)
-
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-sentinel/SentinelDesign.png)
 
