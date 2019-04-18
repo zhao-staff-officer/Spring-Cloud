@@ -48,6 +48,6 @@
 需要文档邮件15196332744@163.com
 
 ##图片展示
-!(https://github.com/youyou-579/123/blob/master/2.8.jpg?raw=true)
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-sentinel/SentinelConsole.png)
 
 
