@@ -44,16 +44,6 @@
 	</modules>
 	
 	<!-- 指定中央仓库 -->
-	<distributionManagement>
-        <repository>
-            <id>Releases</id>
-            <url>http://182.150.59.121:8088/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>Snapshots</id>
-            <url>http://182.150.59.121:8088/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 	
 	<!-- 指定版本 -->
 	<dependencyManagement>
