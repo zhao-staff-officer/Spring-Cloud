@@ -12,7 +12,11 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.Mediator;
 public class MediatorMain {
 	
 	public static void main(String[] args) {
-		
+		ColleageType1 type1=new ColleageType1();
+		ColleageType2 type2=new ColleageType2();
+		Mediator meditor=new MediatorEvent(type1, type2);
+		type1.doEvent(meditor);
+//		type1
 	}
 
 }
