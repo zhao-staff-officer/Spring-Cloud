@@ -7,9 +7,17 @@ ELK是一套日志采集系统,用于分布式日志收集、清洗\过滤\数�
 - Elasticsearch 数据存储
 - Kibana 数据展示
 
-## 架构设计
+参考配置参数：  
+- Filebeat: https://www.cnblogs.com/FRESHMANS/p/9543773.html
+- Logstash: https://www.fooher.com/20190216_183.html
 
 
-## 搭建
+## 架构设计  
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-ELK/ELK-Design.png)
 
-## 示例
+## 搭建  
+发送邮件15196332744@163.com
+
+## 示例  
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-ELK/ELK-ES.png)
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-ELK/ELK-Kibana.png)
