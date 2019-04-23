@@ -21,5 +21,8 @@ Apollo是携程开源的一套配置中心管理,作为替代SpringCloud-Config�
 - Portal通过域名访问Meta Server获取Admin Service服务列表（IP+Port），而后直接通过IP+Port访问服务，同时在Portal侧会做load balance、错误重试
 - 为了简化部署，我们实际上会把Config Service、Eureka和Meta Server三个逻辑角色部署在同一个JVM进程中
 
-## 部署文档
+## 部署文档  
+ 邮件发送15196332744@163.com
+ 
+ ## 示例
 
