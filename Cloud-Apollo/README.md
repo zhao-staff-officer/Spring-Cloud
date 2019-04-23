@@ -12,6 +12,7 @@ Apollo是携程开源的一套配置中心管理,作为替代SpringCloud-Config�
 参考官网地址：https://github.com/ctripcorp/apollo
 
 ## 架构设计
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-Apollo/apollo-design.png)
 - Config Service提供配置的读取、推送等功能，服务对象是Apollo客户端
 - Admin Service提供配置的修改、发布等功能，服务对象是Apollo Portal（管理界面）
 - Config Service和Admin Service都是多实例、无状态部署，所以需要将自己注册到Eureka中并保持心跳
