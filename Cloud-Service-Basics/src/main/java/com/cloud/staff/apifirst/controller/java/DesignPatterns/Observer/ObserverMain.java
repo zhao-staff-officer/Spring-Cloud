@@ -9,5 +9,20 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.Observer;
  *观察者（Observer）的注册功能需要调用主题的 registerObserver() 方法。
  */
 public class ObserverMain {
-
+    
+	public static void main(String[] args) {
+		 WeathData weatherData = new WeathData();
+		 Observerimp1 example1=new Observerimp1(weatherData);
+		 ObserverImp2 example2=new ObserverImp2(weatherData);
+		 
+		 weatherData.setMeasurements(1, 1, 1);
+		 
+		 weatherData.setMeasurements(2, 2, 2);
+		 
+//		 1.0，1.0，1.0
+//		 1.0,1.0,1.0,
+//		 2.0，2.0，2.0
+//		 2.0,2.0,2.0,
+	}
+	
 }
