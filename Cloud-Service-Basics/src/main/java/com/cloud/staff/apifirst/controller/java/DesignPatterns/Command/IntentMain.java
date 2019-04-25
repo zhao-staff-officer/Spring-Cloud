@@ -10,7 +10,7 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.Command;
  * Command：命令
  * Receiver：命令接收者，也就是命令真正的执行者
  * Invoker：通过它来调用命令
- * Client：可以设置命令与命令的接收者
+ * Client：可以设置命令与命令的接收者 
 
  *
  */
