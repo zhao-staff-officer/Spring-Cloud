@@ -12,5 +12,15 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.Strategy;
  *对象，也就是说能动态地改变 Context 所使用的算法。
  */
 public class StrategyMain {
+	
+	public static void main(String[] args) {
+		Duck duck =new Duck();
+		duck.setQuackBehavior(new Squeak());
+        duck.performQuack();
+        duck.setQuackBehavior(new Quack());
+        duck.performQuack();
+	}
+//	squeak!
+//	quack!
 
 }
