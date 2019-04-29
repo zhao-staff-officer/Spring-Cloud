@@ -1,5 +1,8 @@
 server:
   port: 9020
+  tomcat:
+    basedir:
+      /mnt/fileUpload
 spring:
   application:
     name: fastdfs #分布式文件存储系统
@@ -28,8 +31,8 @@ fdfs:
   thumb-image:  #图片压缩
     height: 150
     width: 150
-  tracker-list: 192.168.33.21:22122
-  web-server-url: 192.168.33.21:8888/
+  tracker-list: 180.76.187.245:22122
+  web-server-url: 180.76.187.245:8888/
 
       
 logging: 
