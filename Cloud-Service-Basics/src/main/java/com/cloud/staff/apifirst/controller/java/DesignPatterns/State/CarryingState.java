@@ -10,19 +10,18 @@ public class CarryingState extends LinkState{
 
 	@Override
 	public void put() {
-//		super.context.setLinkeSate(linkState);
-		
+		super.context.setLinkeSate(Context.puttingState);
+		super.context.getLinkState();
 	}
 
 	@Override
 	public void goaway() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("小Y:还没放置炸药成功，撤离失败");
 	}
 
 	@Override
 	public void ignite() {
-		// TODO Auto-generated method stub
+		System.out.println("小Y:还没放置炸药成功，引爆失败");
 		
 	}
 

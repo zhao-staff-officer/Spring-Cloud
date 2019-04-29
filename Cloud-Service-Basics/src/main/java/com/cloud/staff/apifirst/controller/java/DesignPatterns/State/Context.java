@@ -4,9 +4,15 @@ public class Context {
 	
 	public final static CarryingState carryState=new CarryingState();
 	
+	public final static PuttingState puttingState=new PuttingState();
+	
+	public final static GoAwayingState goAwayingState=new GoAwayingState();
+	
+	public final static IgnitingState ignitingState=new IgnitingState();
+	
 	private LinkState linkState;
 	
-	public LinkState setLinkState() {
+	public LinkState getLinkState() {
 		return linkState;
 	}
 	
