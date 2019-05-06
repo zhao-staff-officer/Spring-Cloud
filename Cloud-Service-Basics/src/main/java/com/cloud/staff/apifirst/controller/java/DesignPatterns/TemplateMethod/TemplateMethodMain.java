@@ -7,5 +7,20 @@ package com.cloud.staff.apifirst.controller.java.DesignPatterns.TemplateMethod;
  *通过模板方法，子类可以重新定义算法的某些步骤，而不用改变算法的结构。
  */
 public class TemplateMethodMain {
-
+    public static void main(String[] args) {
+    	CaffeineBeverage caffeineBeverage = new Coffee();
+        caffeineBeverage.CaffeineBeverage();
+        System.out.println("-----------");
+        caffeineBeverage = new Tea();
+        caffeineBeverage.CaffeineBeverage();
+	}
+//    boilWater
+//    Coffee.brew
+//    pourInCup
+//    Coffee.addCondiments
+//    -----------
+//    boilWater
+//    Tea.brew
+//    pourInCup
+//    Tea.addCondiments
 }
