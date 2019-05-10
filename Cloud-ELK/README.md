@@ -15,7 +15,7 @@ ELK是一套日志采集系统,用于分布式日志收集、清洗\过滤\数�
 ## 架构设计  
 ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-ELK/ELK-Design.png)
 
-## 搭建  
+## 部署文档    
 发送邮件15196332744@163.com
 
 ## 示例  
