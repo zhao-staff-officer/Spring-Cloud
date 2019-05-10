@@ -28,7 +28,7 @@
     elasticsearch数据存储  
     kibana数据展示  
 ## Swagger:接口调试工具√
-## FastDFS：分布式文件存储系统√
+## FastDFS/Minio：存储系统√
 ## Mybatis-Plus：插件与代码生成器√
 ## druid：数据库连接池√
 ## redis√/redisManager√/codis×：缓存
