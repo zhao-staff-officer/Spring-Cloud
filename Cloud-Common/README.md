@@ -8,3 +8,4 @@ common提供工具封装
   + util
     + cacheUtils [redisClinetApi]
     + codegeneral [mybaitis-plus代码生成器]
+    + jwtUtils[jwt生成工具]
