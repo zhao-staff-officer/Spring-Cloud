@@ -41,6 +41,7 @@
 	  <module>Cloud-Nacos</module>
 	  <module>Cloud-Sentinel</module>
 	  <module>Cloud-ELK</module>
+	  <module>Cloud-GitlabCICD</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->
