@@ -12,4 +12,5 @@
  发送邮件15196332744@163.com
  
  ## 示例
+ ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-GitlabCICD/gitlabp1.png)
  
