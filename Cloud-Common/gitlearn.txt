@@ -22,6 +22,6 @@ Git is free software.
 # git checkout master --切换到master分支
 # git merge dev --dev合并到master分支
 # git branch -d dev  -- 删除dev分支
-# 随便写点验证分支冲突2
+# 随便写点验证分支冲突
 
 
