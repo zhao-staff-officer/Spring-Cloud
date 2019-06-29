@@ -14,3 +14,4 @@ Git is free software.
 # git diff HEAD -- XXX 查看工作区和版本去里面最新区别
 # git checkout -- xxx 把工作区文件撤销修改
 # git rm -- xxx 删除文件
+# git remote add origin xxxx --管理仓库
