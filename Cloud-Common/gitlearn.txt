@@ -23,5 +23,5 @@ Git is free software.
 # git merge dev --dev合并到master分支
 # git branch -d dev  -- 删除dev分支
 # 随便写点验证分支冲突
-
+# git log --graph --pretty=oneline --abbrev-commit --查看分支合并情况
 
