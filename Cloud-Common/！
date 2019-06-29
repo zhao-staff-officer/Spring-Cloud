@@ -18,5 +18,3 @@ Git is free software.
 # git push -u origin master --本地仓库推送到远程仓库
 # git clone xxx --克隆仓库代码
 # git checkout -b dev --创建dev分支并切换到dev分支，相当于：git branch dev /git checkout dev
-# git branch --查看当前分支
-
