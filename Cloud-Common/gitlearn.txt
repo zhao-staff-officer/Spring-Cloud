@@ -14,6 +14,15 @@ Git is free software.
 # git diff HEAD -- XXX 查看工作区和版本去里面最新区别
 # git checkout -- xxx 把工作区文件撤销修改
 # git rm -- xxx 删除文件
+# git remote add origin xxxx --管理仓库
+# git push -u origin master --本地仓库推送到远程仓库
+# git clone xxx --克隆仓库代码
+# git checkout -b dev --创建dev分支并切换到dev分支，相当于：git branch dev /git checkout dev
+# git branch --查看当前分支
+# git checkout master --切换到master分支
+# git merge dev --dev合并到master分支
+# git branch -d dev  -- 删除dev分支
+# git log --graph --pretty=oneline --abbrev-commit --查看分支合并情况
 # git branch -a --查看本地分支与远程分支
 # git push --set-upstream origin xxx --在远程创建一个与本地同名分支跟踪
 # git checkout --track origin/xx --在本地创建一个与原创同名跟踪分支
