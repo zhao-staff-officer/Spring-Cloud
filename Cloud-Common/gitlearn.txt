@@ -14,3 +14,7 @@ Git is free software.
 # git diff HEAD -- XXX 查看工作区和版本去里面最新区别
 # git checkout -- xxx 把工作区文件撤销修改
 # git rm -- xxx 删除文件
+# git branch -a --查看本地分支与远程分支
+# git push --set-upstream origin xxx --在远程创建一个与本地同名分支跟踪
+# git checkout --track origin/xx --在本地创建一个与原创同名跟踪分支
+# git branch -vv -a --查看分支状态
