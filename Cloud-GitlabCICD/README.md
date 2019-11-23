@@ -2,7 +2,7 @@
 ## 项目说明
  gitlab代码仓库管理，集成
  - CI：持续集成
- - CD：持续交互
+ - CD：持续交付
  - gitlab-runner 持续集成工具
  - Harbor：docker中央仓库
  - JIB：docker打包工具
