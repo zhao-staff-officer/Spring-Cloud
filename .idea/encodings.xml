@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Apollo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-ELK" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-FastDFS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-GitlabCICD" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-MybatisPlus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Nacos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Service-Basics" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-sentinel" charset="UTF-8" />
+  </component>
+</project>

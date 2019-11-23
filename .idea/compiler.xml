@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Cloud-Service" />
+        <module name="cloud-nacos" />
+        <module name="cloud-sentinel" />
+        <module name="cloud-elk" />
+        <module name="cloud-service-basics" />
+        <module name="cloud-services" />
+        <module name="cloud-config" />
+        <module name="cloud-monitor" />
+        <module name="cloud-gitlabCICD" />
+        <module name="cloud-apollo" />
+        <module name="cloud-eureka" />
+        <module name="cloud-fastdfs" />
+        <module name="cloud-mybatisplus" />
+        <module name="cloud-zuul" />
+        <module name="cloud-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Cloud-Service" options="-parameters" />
+      <module name="cloud-apollo" options="-parameters" />
+      <module name="cloud-common" options="-parameters" />
+      <module name="cloud-config" options="-parameters" />
+      <module name="cloud-elk" options="-parameters" />
+      <module name="cloud-eureka" options="-parameters" />
+      <module name="cloud-fastdfs" options="-parameters" />
+      <module name="cloud-gitlabCICD" options="-parameters" />
+      <module name="cloud-monitor" options="-parameters" />
+      <module name="cloud-mybatisplus" options="-parameters" />
+      <module name="cloud-nacos" options="-parameters" />
+      <module name="cloud-sentinel" options="-parameters" />
+      <module name="cloud-service-basics" options="-parameters" />
+      <module name="cloud-services" options="-parameters" />
+      <module name="cloud-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
