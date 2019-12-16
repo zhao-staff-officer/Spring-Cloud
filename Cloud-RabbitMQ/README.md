@@ -1,5 +1,6 @@
 # RabbitMQ消息队列
 # 模型设计
+![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-RabbitMQ/RabbitMQ1.png)
 # Exchange类型
 - fanout
 > 路由广播的形式,将会把消息发给绑定它的全部队列
