@@ -5,11 +5,11 @@
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//@RabbitListener(queues = "fanout")
-//public class Consumer {
+//@RabbitListener(queues = "fanout.C")
+//public class ConsumerC {
 //
 //    @RabbitHandler
 //    public void process(String fanout){
-//        System.out.println(fanout);
+//        System.out.println("C"+fanout);
 //    }
 //}

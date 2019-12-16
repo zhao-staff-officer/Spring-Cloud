@@ -1,4 +1,4 @@
-package com.cloud.staff.rabbit.fanout;//package com.cloud.staff.rabbit.fanout;
+//package com.cloud.staff.rabbit.fanout;//package com.cloud.staff.rabbit.fanout;
 //
 //import org.springframework.amqp.core.AmqpTemplate;
 //import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ package com.cloud.staff.rabbit.fanout;//package com.cloud.staff.rabbit.fanout;
 //    private AmqpTemplate amqpTemplate;
 //
 //    public void send(){
-//        this.amqpTemplate.convertAndSend("fanout","fanout发生数据");
+//        System.out.println("准备发生数据");
+//        this.amqpTemplate.convertAndSend("FanoutExchange","","fanout发送数据");
 //    }
 //}

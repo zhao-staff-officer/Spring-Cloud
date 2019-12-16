@@ -1,16 +1,15 @@
-//package com.cloud.staff.rabbit.topic;
+//package com.cloud.staff.rabbit.fanout;
 //
 //import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 //import org.springframework.amqp.rabbit.annotation.RabbitListener;
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//@RabbitListener(queues = "topic.message")
-//public class ConsumnerA {
+//@RabbitListener(queues = "fanout.B")
+//public class ConsumerB {
 //
 //    @RabbitHandler
-//    public void process(String v){
-//         System.out.println("A接收消息"+v);
+//    public void process(String fanout){
+//        System.out.println("B"+fanout);
 //    }
-//
 //}
