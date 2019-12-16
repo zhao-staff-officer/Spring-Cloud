@@ -42,6 +42,7 @@
 	  <module>Cloud-Sentinel</module>
 	  <module>Cloud-ELK</module>
 	  <module>Cloud-GitlabCICD</module>
+	  <module>Cloud-RabbitMQ</module>
 	</modules>
 	
 	<!-- 指定中央仓库 -->

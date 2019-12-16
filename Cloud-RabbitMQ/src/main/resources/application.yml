@@ -1,0 +1,34 @@
+server:
+  port: 9060
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    host: 192.168.33.21
+    port: 5672
+    username: root
+    password: root
+    virtual-host: /
+    #publisher-confirms: ture #开启发送确认机制
+    #publisher-returns: ture #开启发生失败回退机制
+    #listener:
+      #direct:
+        #acknowledge-mode: manual
+      #simple:
+        #acknowledge-mode: manual
+
+logging:
+  path: /mnt/logs #日志输出位置
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #控制台日志数据格式
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #输出格式
+    dateformat: yyyy-MM-dd HH:mm:ss #日志时间格式
+    level: INFO  #日志输出级别
+  file:
+    max-size: 500MB
+    max-history: 1
+    
+    
+
+
+
