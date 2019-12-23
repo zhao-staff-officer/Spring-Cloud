@@ -4,18 +4,18 @@ spring:
   application:
     name: rabbitmq
   rabbitmq:
-    host: 192.168.33.21
+    host: 192.168.33.22
     port: 5672
     username: root
     password: root
     virtual-host: /
-    #publisher-confirms: ture #开启发送确认机制
-    #publisher-returns: ture #开启发生失败回退机制
-    #listener:
-      #direct:
-        #acknowledge-mode: manual
-      #simple:
-        #acknowledge-mode: manual
+    publisher-confirms: true #开启消息发送确认，默认为false,消息到达exchange确认
+    publisher-returns: true #开启消息失败回调，默认false，exchange到达queue确认
+
+#消息队列配置
+mq:
+  ipAddress: 172.168.33.22 #本机ip地址
+  paymentTopic: PaymentMessage
 
 logging:
   path: /mnt/logs #日志输出位置

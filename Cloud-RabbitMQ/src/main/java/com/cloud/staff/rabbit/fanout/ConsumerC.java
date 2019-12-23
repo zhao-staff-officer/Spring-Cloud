@@ -5,7 +5,7 @@
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//@RabbitListener(queues = "fanout.C")
+//@RabbitListener(queues = "Payment")
 //public class ConsumerC {
 //
 //    @RabbitHandler

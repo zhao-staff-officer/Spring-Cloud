@@ -1,4 +1,4 @@
-package com.cloud.staff.rabbit.head;
-
-public class Test {
-}
+//package com.cloud.staff.rabbit.head;
+//
+//public class Test {
+//}

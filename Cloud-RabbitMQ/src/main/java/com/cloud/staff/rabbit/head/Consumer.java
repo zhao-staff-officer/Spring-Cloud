@@ -1,4 +1,4 @@
-package com.cloud.staff.rabbit.head;
-
-public class Consumer {
-}
+//package com.cloud.staff.rabbit.head;
+//
+//public class Consumer {
+//}

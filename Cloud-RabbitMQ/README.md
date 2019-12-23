@@ -1,7 +1,7 @@
 # RabbitMQ消息队列
-# 模型设计
+## 模型设计
 ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-RabbitMQ/RabbitMQ1.png)
-# Exchange类型
+## Exchange交换机类型
 - fanout
 > 路由广播的形式,将会把消息发给绑定它的全部队列
 - dirct
@@ -13,3 +13,10 @@
 - headers
 > 是根据一个规则进行匹配,在消息队列和交换机绑定的时候会指定一组键值对规则,而发送消息的时候也会指定一组键值对规则,
   当两组键值对规则相匹配的时候,消息会被发送到匹配的消息队列中
+## 策略配置
+### durable持久化
+
+### 消息确认机制
+ - 消费者消息确认
+ - 发送者消息确认
+
