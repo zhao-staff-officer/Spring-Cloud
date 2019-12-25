@@ -8,7 +8,7 @@ public enum EnumTest {
 	private String day;
 	private String num;
 	
-	private EnumTest(String day,String num) {
+	 EnumTest(String day,String num) {
 	 this.day = day;
 	 this.num = num;
 	 }

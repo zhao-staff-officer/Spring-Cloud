@@ -18,5 +18,10 @@
 
 ### 消息确认机制
  - 消费者消息确认
+   - ack 确认接收
+   - nack 拒绝接收
+   
  - 发送者消息确认
+   - spring.rabbbit.publisher-confirms: true 确认消息到达exchange 
+   - spring.rabbbit.publisher-returns: true  确认消息到达queue
 

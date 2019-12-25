@@ -24,9 +24,7 @@ public class RabbitmqPublishConfirmConfig implements RabbitTemplate.ConfirmCallb
 
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-            System.out.println("消息唯一标识："+correlationData);
-            System.out.println("确认结果："+ack);
-            System.out.println("失败原因："+cause);
+        System.out.println("消息到达exchange："+"消息唯一标识："+correlationData+"确认结果："+ack+"失败原因："+cause+".");
     }
 
 
