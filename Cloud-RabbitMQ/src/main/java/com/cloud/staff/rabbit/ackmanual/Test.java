@@ -1,16 +1,16 @@
-package com.cloud.staff.rabbit.ackmanual;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class Test {
-    @Autowired
-    private Producer producer;
-
-    @RequestMapping("/ackmanual")
-    public void ackmanual(){
-        producer.send();
-    }
-}
+//package com.cloud.staff.rabbit.ackmanual;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//@RestController
+//public class Test {
+//    @Autowired
+//    private Producer producer;
+//
+//    @RequestMapping("/ackmanual")
+//    public void ackmanual(){
+//        producer.send();
+//    }
+//}
