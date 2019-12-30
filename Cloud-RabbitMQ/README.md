@@ -14,7 +14,16 @@
 > 是根据一个规则进行匹配,在消息队列和交换机绑定的时候会指定一组键值对规则,而发送消息的时候也会指定一组键值对规则,
   当两组键值对规则相匹配的时候,消息会被发送到匹配的消息队列中
 ## 策略配置
-### durable持久化
+### 过期策略TTL
+ - 消息过期策略
+    - 管道：channel.queueDeclare 方法中加入x-message -ttl 参数
+    - 单条：channel.basicPublish 方法中加入 expiration的属性参数
+ - 队列过期策略
+    - channel queueDeclare 方法中加入 expires 参数
+
+### 持久化durable
+ - exchange持久化
+ - queue持久化
 
 ### 消息确认机制
  - 消费者消息确认
@@ -24,4 +33,10 @@
  - 发送者消息确认
    - spring.rabbbit.publisher-confirms: true 确认消息到达exchange 
    - spring.rabbbit.publisher-returns: true  确认消息到达queue
+### 死信队列
+   - channel.queueDeclare 方法中设置 x-dead-letter-exchange 参数来为这
+     个队列添加 DLX 
+## 打怪高阶
+### 存储机制
+### 
 
