@@ -20,7 +20,9 @@
     - 单条：channel.basicPublish 方法中加入 expiration的属性参数
  - 队列过期策略
     - channel queueDeclare 方法中加入 expires 参数
-
+### 优先级
+  - queueDeclare 方法添加 x-max-priority 参数
+  
 ### 持久化durable
  - exchange持久化
  - queue持久化
@@ -36,7 +38,14 @@
 ### 死信队列
    - channel.queueDeclare 方法中设置 x-dead-letter-exchange 参数来为这
      个队列添加 DLX 
-## 打怪高阶
-### 存储机制
-### 
+## 存储机制
+  - 进程架构
+   ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-RabbitMQ/rabbitmq_msg_store.jpg)
+  - 存储过程
+  ![image](https://github.com/zhao-staff-officer/Spring-Cloud/blob/master/Cloud-RabbitMQ/rabbitmq_msg_process.jpg)
+  - 队列结构
+    - alpha: 消息内容(包括消息体、属性和 headers) 和消息索引都存储在内存中
+    - beta: 消息内容保存在磁盘中，消息索引保存在内存中。
+    - gamma: 消息内容保存在磁盘中，消息索引在磁盘和内存中都有
+    - delta: 消息内容和索引都在磁盘中
 
