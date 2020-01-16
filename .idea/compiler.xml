@@ -7,22 +7,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-apollo" />
-        <module name="cloud-common" />
-        <module name="cloud-config" />
-        <module name="cloud-elk" />
-        <module name="cloud-eureka" />
-        <module name="cloud-fastdfs" />
-        <module name="cloud-gitlabCICD" />
-        <module name="cloud-monitor" />
-        <module name="cloud-mybatisplus" />
-        <module name="cloud-nacos" />
-        <module name="cloud-rabbitmq" />
-        <module name="cloud-sentinel" />
         <module name="Cloud-Service" />
+        <module name="cloud-zuul" />
+        <module name="cloud-nacos" />
+        <module name="cloud-mybatisplus" />
+        <module name="cloud-elk" />
         <module name="cloud-service-basics" />
         <module name="cloud-services" />
-        <module name="cloud-zuul" />
+        <module name="cloud-config" />
+        <module name="cloud-sentinel" />
+        <module name="cloud-gitlabCICD" />
+        <module name="cloud-apollo" />
+        <module name="cloud-eureka" />
+        <module name="cloud-fastdfs" />
+        <module name="cloud-monitor" />
+        <module name="cloud-rabbitmq" />
+        <module name="cloud-common" />
       </profile>
     </annotationProcessing>
   </component>
