@@ -1,0 +1,44 @@
+JDK1.8,JVM参数：JAVA_OPTS
+1:堆大小设置
+example: java -Xmx3550m -Xms3550m -Xmn2g -Xss128k
+         -XX:NewRation=4 -XX:SurvivorRation=4  -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=128m -XX:MaxTenuringThreshold=0
+ -Xmx                                  设置JVM最大可用堆内存
+ -Xms                                  设置JVM初始分配堆内存，一般与Xmx配置相同，避免每次垃圾回收完成后JVM重新分配内存
+ -Xmn                                  设置年轻代大小
+ -Xss                                  设置每个线程堆栈大小
+ -XX:NewRation=4                       设置年轻代与老年代比值。设置为4，则年轻代与老年代所占比值为1:4
+ -XX:SurvivorRation=4                  设置年轻代中Eden与Survivor的大小比值。设置为4，则两个Survivor与Eden的比值为2:4
+ -XX:MetaspaceSize                     设置持久代最小内存，默认为物理内存的1/64 (-XX:PermSize{jdk<1.8}）
+ -XX:MaxMetaspaceSize                  设置持久代堆内存，默认为物理内存1/4  (-XX:MaxPermSize=16m{jdk<1.8} )
+ -XX:MaxTenuringThreshold=15           设置垃圾最大年龄。如果设置为0的话，则年轻代对象不经过Survivor区，直接进入年老代。默认15
+
+2：回收器
+example: java -Xmx3800m -Xms3800m -Xmn2g -Xss128k -XX:+UseParallelGC -XX:ParallelGCThreads=20
+-XX:+UseParallelGC                     设置年轻代使用并行收集器
+-XX:+UseParNewGC                       设置年轻代为并行收集,JDK5.0以上，JVM会根据系统配置自行设置，所以无需再设置此值。
+-XX:MaxGCPauseMillis=100               设置每次年轻代垃圾回收的最长时间，如果无法满足此时间，JVM会自动调整年轻代大小，以满足此值
+-XX:+UseParallelOldGC                  设置老年代使用并行收集器
+-XX:+UseConcMarkSweepGC                设置年老代为并发收集
+-XX:CMSFullGCsBeforeCompaction=5       由于并发收集器不对内存空间进行压缩、整理，所以运行一段时间以后会产生“碎片”，使得运行效率降低。此值设置运行多少次GC以后对内存空间进行压缩、整理。
+-XX:+UseAdaptiveSizePolicy             设置此选项后，并行收集器会自动选择年轻代区大小和相应的Survivor区比例，以达到目标系统规定的最低相应时间或者收集频率等，此值建议使用并行收集器时，一直打开。
+-XX:+UseCMSCompactAtFullCollection     打开对年老代的压缩
+-XX:CMSInitiatingOccupancyFraction=70  使用cms作为垃圾回收使用70％后开始CMS收集
+-XX:+UseG1GC 使用 G1 (Garbage First)   垃圾收集器(没有young/old区)
+
+
+3:辅助
+-XX:ConcGCThreads=20                   配置并发垃圾收集器使用的线程数量
+-XX:ParallelGCThreads=20               配置并行收集器线程数,此值最好配置与处理器数目相等
+-XX:+DisableExplicitGC                 禁止在启动期间显式调用System.gc()
+-XX:+HeapDumpOnOutOfMemoryError        OOM时导出堆到文件
+-XX:HeapDumpPath=d:/a.dump        　　 导出OOM的路径
+-XX:+PrintGCDetails           　　　　 打印GC详细信息
+-XX:+PrintGCTimeStamps            　　 打印CG发生的时间戳
+-XX:+PrintHeapAtGC            　　　　 每一次GC前和GC后，都打印堆信息
+-XX:+TraceClassLoading            　　 监控类的加载
+-XX:+PrintClassHistogram        　　　 按下Ctrl+Break后，打印类的信息
+
+
+示例：
+java -jar -Xmx350m -Xms350m -Xmn250m -Xss128k -XX:+UseG1GC -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=d:/a.dump -XX:+PrintGC:PrintGCTimeStamps
+
