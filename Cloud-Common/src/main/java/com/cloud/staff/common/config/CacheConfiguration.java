@@ -20,9 +20,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 @ConfigurationProperties(prefix = "spring.cache.redis")
 public class CacheConfiguration {
-    
+
 	private static final Logger log=LoggerFactory.getLogger(CacheConfiguration.class);
-	
+
 	private Duration timeToLive = Duration.ZERO;
 
 	public void setTimeToLive(Duration timeToLive) {
@@ -46,10 +46,10 @@ public class CacheConfiguration {
 	@Bean(name = "redisTemplate")
 	public RedisTemplate<String, Serializable> redisTemplate(RedisConnectionFactory  redisConnectionFactory) {
 		RedisTemplate<String, Serializable> template = new RedisTemplate<>();
-		
+
 		template.setKeySerializer(this.keySerializer());
 		template.setValueSerializer(this.valueSerializer());
-		
+
 		template.setHashKeySerializer(this.keySerializer());
 		template.setHashValueSerializer(this.valueSerializer());
 		template.setConnectionFactory(redisConnectionFactory);
@@ -64,5 +64,5 @@ public class CacheConfiguration {
 	private RedisSerializer<Object> valueSerializer() {
 		return new GenericJackson2JsonRedisSerializer();
 	}
-	
+
 }

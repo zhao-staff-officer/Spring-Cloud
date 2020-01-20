@@ -44,9 +44,9 @@ public class CodeGeneral {
 	//个人信息
 	private static final String Author="赵参谋";
 	//需要生成的表
-	
+
 	private static String table="frontend_data"; //table名字
-	
+
 
 	public static void main(String[] args) {
         AutoGenerator mpg = new AutoGenerator()
@@ -106,7 +106,7 @@ public class CodeGeneral {
 			   }))
             // 关闭默认 xml 生成，调整生成 至 根目录
             ).setTemplate( new TemplateConfig().setXml(null));
-        	
+
 
         // 执行生成
         mpg.execute();

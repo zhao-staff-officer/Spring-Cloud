@@ -40,5 +40,9 @@ example: java -Xmx3800m -Xms3800m -Xmn2g -Xss128k -XX:+UseParallelGC -XX:Paralle
 
 
 示例：
-java -jar -Xmx350m -Xms350m -Xmn250m -Xss128k -XX:+UseG1GC -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=d:/a.dump -XX:+PrintGC:PrintGCTimeStamps
 
+G1回收器
+java -jar -Xmx512m -Xms512m -Xmn356m -Xss256k -XX:+UseG1GC -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=./arthas.dump -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+TraceClassLoading
+
+CMS回收器
+java -jar -Xmx512m -Xms512m -Xmn356m -Xss256K -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70
