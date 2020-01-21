@@ -5,7 +5,7 @@ public class ThreadSleep implements  Runnable{
     public void run() {
         System.out.println("run threadName="+Thread.currentThread().getName()+"begin");
         try {
-            Thread.sleep(2000L);
+            Thread.sleep(20000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
