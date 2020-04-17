@@ -24,7 +24,7 @@ import feign.hystrix.HystrixFeign;
 import feign.hystrix.SetterFactory;
 
 /**
- * 
+ *
  * feignhystrix开启熔断
  * 1：fallback降级定义，快速失败，超时时间
  * 2：隔离：线程隔离
@@ -33,8 +33,8 @@ import feign.hystrix.SetterFactory;
  */
 @Configuration
 public class FeignHystrixConf {
-	
-	
+
+
 	/**
 	 * 开启熔断,使用hystrixFeign
 	 * @return
@@ -52,14 +52,14 @@ public class FeignHystrixConf {
 		          .andCommandKey(HystrixCommandKey.Factory.asKey(commandKey))
 		          .andCommandPropertiesDefaults(
 		        		  HystrixCommandProperties.Setter()
-		        		  
+
 		        		  //是否启用降级处理，如果启用了，则在超时或异常时调用getFallback进行降级处理，默认开启。
 		        		  .withFallbackEnabled(true)
 		        		  //降级方法的最大调用线程数，如果超出此信号量，会抛出异常
 		        		  .withFallbackIsolationSemaphoreMaxConcurrentRequests(10)
 		        		  // 超时配置
 		        		  .withExecutionTimeoutInMilliseconds(10000)
-		        		  
+
 		        		  //启用熔断,默认为true
 		        		  .withCircuitBreakerEnabled(true)
 		        		  //是否强制关闭熔断开关，如果强制关闭了熔断开关，则请求不会被降级，一些特殊场景可以动态配置该开关，默认为false
@@ -90,7 +90,7 @@ public class FeignHystrixConf {
 		    }
 		});
 	}
-	
+
 	/**
 	 * 设置feign日志
 	 * NONE, 不记录日志 (默认)
@@ -103,10 +103,10 @@ public class FeignHystrixConf {
 	Logger.Level loggerLevel(){
 		return Logger.Level.FULL;
 	}
-	
+
 	/**
 	 * 设置feign读取超时10S，连接超时6S
-	 * 
+	 *
 	 * param1:connectTimeoutMillis :10s 建立连接时间
 	 * param2:readTimeoutMillis :6s 获取反馈时间
 	 * @return
@@ -130,5 +130,5 @@ public class FeignHystrixConf {
 		//禁用重试,不重试,重试要考虑幂等性
 		return Retryer.NEVER_RETRY;
     }
-	
+
 }

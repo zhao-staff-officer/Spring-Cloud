@@ -94,6 +94,11 @@
 			<version>1.18.8</version>
 			<scope>provided</scope>
 		</dependency>
+		<!--aop-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
 	</dependencies>
 

@@ -1,0 +1,40 @@
+spring: 
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 200MB
+zuul: 
+  routes:
+    apifirst: 
+      path: /apifirst/** #验证服务
+      serviceId: apifirst
+      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
+    apisecond: 
+      path: /apisecond/** #验证服务
+      serviceId: apisecond
+      custom-sensitive-headers: true #设置允许敏感的头信息无法经过API网关进行传递
+  add-host-header: true
+  host:
+      max-total-connections: 200 #每个服务的http客户端连接池最大连接。默认200
+      max-per-route-connections: 50 #每个route可用的最大连接数，默认20
+      connect-timeout-millis: 10000 #请求超时时间，默认2000毫秒
+      connection-request-timeout-millis: 5000 #从连接池获取连接的超时时间
+      socket-timeout-millis: 10000 #从服务器读取数据超时时间，默认1000毫秒
+      time-to-live: -1 #连接池生命周期
+  retryable: false #开启重试
+
+ribbon: #超时设置
+  ReadTimeout: 10000 
+  SocketTimeout: 10000
+  
+logging: 
+  path: /mnt/logs/zuul #日志输出位置
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #控制台日志数据格式
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n" #输出格式
+    dateformat: yyyy-MM-dd HH:mm:ss #日志时间格式
+    level: INFO  #日志输出级别
+  file:
+    max-size: 500MB
+    max-history: 1

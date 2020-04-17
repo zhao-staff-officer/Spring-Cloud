@@ -1,0 +1,12 @@
+zuul: 
+  ratelimit:  #服务限流：60秒内允许10个访问，或者要求总请求时间小于20秒
+      enabled: true
+      behind-proxy: true
+      repository: REDIS #存储到redis
+      policies: 
+        api: 
+          limit: 200   # 单位时间内允许访问的个数
+          quota: 400   # 单位时间内允许访问的总时间（统计每次请求的时间综合）
+          refresh-interval: 60 # 单位时间设置
+          type: ORIGIN,USER,URL #url：请求路径限流，origin客户端ip限流，user用户限流
+        

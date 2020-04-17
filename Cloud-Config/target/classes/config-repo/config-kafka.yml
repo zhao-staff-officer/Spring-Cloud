@@ -1,0 +1,17 @@
+spring: 
+  kafka:
+    bootstrap-servers: 172.16.4.3:9092
+    listener:
+      concurrency: 10
+    consumer:
+      group-id: InternetHospital
+      key-deserializer:   org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: true
+      heartbeat-interval: 2000 #2s心跳间隔
+      max-poll-records: 50 #每次消耗数量
+    producer: 
+      batch-size: 65536
+      buffer-memory: 524288
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
