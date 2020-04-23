@@ -19,12 +19,12 @@
 
 	<dependencies>
 		 <!-- 服务应用 -->
-		<dependency>  
-	        <groupId>org.springframework.boot</groupId>  
-	        <artifactId>spring-boot-starter-web</artifactId>  
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-web</artifactId>
 	    </dependency>
-	    <!-- 注冊中心客戶段 -->
-	    <dependency>
+		<!-- 注冊中心客戶段 -->
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
