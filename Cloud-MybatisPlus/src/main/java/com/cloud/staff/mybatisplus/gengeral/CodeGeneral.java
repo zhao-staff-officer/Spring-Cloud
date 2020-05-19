@@ -16,18 +16,18 @@ import java.util.Map;
 public class CodeGeneral {
 	//jdbc
 	private static final String Driver_Name="com.mysql.jdbc.Driver";
-	private static final String Url="jdbc:mysql://localhost:3306/db_sr?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
-	private static final String User_Name="user_istore";
-	private static final String Pass_Word="istore";
+	private static final String Url="jdbc:mysql://localhost:3306/finance?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
+	private static final String User_Name="root";
+	private static final String Pass_Word="zhao4443";
 	//输出路径
-	private static final String Output_Dir="E:\\SelfWorkpace\\Hospital\\InternetHospital\\InternetHospital-dockhospital\\src\\main\\java";
+	private static final String Output_Dir="F:\\SelfWorkpace\\Hospital\\InternetHospital\\InternetHospital-dockhospital\\src\\main\\java";
 	private static final String Entity="com.ih.entity";
 	private static final String Dao="com.ih.dao";
 	private static final String service="com.ih.service";
 	private static final String serviceImpl="com.ih.service.impl";
 	private static final String controller="com.ih.controller";
 	//private static final String Xml="";
-	private static String packageName="E:\\SelfWorkpace\\Hospital\\InternetHospital\\InternetHospital-dockhospital";//xml文件路径
+	private static String packageName="F:\\SelfWorkpace\\Hospital\\InternetHospital\\InternetHospital-dockhospital";//xml文件路径
 	private static File file = new File(packageName);
 	private static String path = file.getAbsolutePath();
 	//个人信息
