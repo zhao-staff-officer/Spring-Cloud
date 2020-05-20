@@ -21,10 +21,7 @@ public class demo1 {
             try {
                 for (int i = 0; i < 10; i++) {
                     System.out.println(Thread.currentThread().getName() + "打印：" + i);
-                    Thread.sleep(200);
                 }
-            }catch (InterruptedException e){
-                e.printStackTrace();
             }finally {
                 lock.unlock();
             }
@@ -48,5 +45,25 @@ public class demo1 {
                 lockThread.testLock();
             }
         },"B").start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                lockThread.testLock();
+            }
+        },"C").start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                lockThread.testLock();
+            }
+        },"D").start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                lockThread.testLock();
+            }
+        },"E").start();
     }
 }
