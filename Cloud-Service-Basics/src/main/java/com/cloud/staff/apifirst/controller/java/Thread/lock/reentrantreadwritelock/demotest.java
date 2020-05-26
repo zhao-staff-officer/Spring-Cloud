@@ -5,18 +5,18 @@ package com.cloud.staff.apifirst.controller.java.Thread.lock.reentrantreadwritel
  */
 public class demotest {
     public static void main(String[] args) {
-        demo1 demo1 = new demo1();
+        demo2 demo2 = new demo2();
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                demo1.readMethod();
+                demo2.readMethod();
             }
         },"A");
 
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                demo1.readMethod();
+                demo2.readMethod();
             }
         },"B");
 
