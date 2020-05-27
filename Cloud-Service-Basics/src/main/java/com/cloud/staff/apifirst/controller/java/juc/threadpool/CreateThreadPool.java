@@ -1,4 +1,4 @@
-package com.cloud.staff.apifirst.controller.java.Thread.threadpool;
+package com.cloud.staff.apifirst.controller.java.juc.threadpool;
 
 import java.util.concurrent.*;
 
