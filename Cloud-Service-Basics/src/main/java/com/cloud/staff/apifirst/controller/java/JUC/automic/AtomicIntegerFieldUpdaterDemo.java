@@ -14,6 +14,8 @@ public class AtomicIntegerFieldUpdaterDemo {
           User conan = new User("conan",10);
           atomicUser.getAndIncrement(conan);
           System.out.println(atomicUser.get(conan));
+          atomicUser.addAndGet(conan,12);
+          System.out.println(atomicUser.get(conan));
     }
 
 
