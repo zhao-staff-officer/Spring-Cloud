@@ -4,7 +4,7 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- IOC(Inversion of control)
+    <!-- IOC(Inverse of control)
       ID:给对象在容器中提供一个唯一标识。用于获取对象
       class：指定类的全限定名。用于反射创建对象。默认情况下调用无参构造函数
       scope:指定对象的作用范围(1:singleton：默认值，单例的（在整个容器中只有一个对象）

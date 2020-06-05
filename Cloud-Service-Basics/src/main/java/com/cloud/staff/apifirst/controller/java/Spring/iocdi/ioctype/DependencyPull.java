@@ -4,9 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.context.ApplicationContext;
 
 /**
- * 依赖查找
+ * 依赖拖拽
  */
-public class ClassPathXmlApplicationContext {
+public class DependencyPull {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new org.springframework.context.support.ClassPathXmlApplicationContext("application.xml");
         ApplicationDemoEntityClass applicationDemoEntityClass = applicationContext.getBean("ApplicationDemoEnity3",ApplicationDemoEntityClass.class);
