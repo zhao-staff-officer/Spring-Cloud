@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 public class DependencyPull {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new org.springframework.context.support.ClassPathXmlApplicationContext("application.xml");
-        ApplicationDemoEntityClass applicationDemoEntityClass = applicationContext.getBean("ApplicationDemoEnity3",ApplicationDemoEntityClass.class);
-        System.out.println(JSONObject.toJSONString(applicationDemoEntityClass));
+        ApplicationDemoEntity applicationDemoEntity = applicationContext.getBean("ApplicationDemoEnity3", ApplicationDemoEntity.class);
+        System.out.println(JSONObject.toJSONString(applicationDemoEntity));
     }
 }

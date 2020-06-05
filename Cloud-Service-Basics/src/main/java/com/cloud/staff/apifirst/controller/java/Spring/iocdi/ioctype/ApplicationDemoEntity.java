@@ -1,24 +1,22 @@
 package com.cloud.staff.apifirst.controller.java.Spring.iocdi.ioctype;
 
-import lombok.Data;
-
 /**
  * 测试实体
  */
-public class ApplicationDemoEntityClass {
+public class ApplicationDemoEntity {
 
     private String name;
 
     private int age;
 
    /*有参构造方法注入*/
-    public ApplicationDemoEntityClass(String name,int age){
+    public ApplicationDemoEntity(String name, int age){
         System.out.println("Spring有参构造方法注入");
        this.name=name;
        this.age=age;
     }
     /*无参构造方法*/
-    public ApplicationDemoEntityClass(){
+    public ApplicationDemoEntity(){
 
     }
 
@@ -28,9 +26,9 @@ public class ApplicationDemoEntityClass {
     }
 
     /*静态方法实例化对象*/
-    public static ApplicationDemoEntityClass createStaticBean(){
+    public static ApplicationDemoEntity createStaticBean(){
         System.out.println("Spring实例化对象");
-        return new ApplicationDemoEntityClass();
+        return new ApplicationDemoEntity();
     }
 
     public String getName() {
