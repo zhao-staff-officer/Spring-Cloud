@@ -16,7 +16,7 @@ import java.util.Map;
 public class CodeGeneral {
 	//jdbc
 	private static final String Driver_Name="com.mysql.jdbc.Driver";
-	private static final String Url="jdbc:mysql://localhost:3306/finance?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
+	private static final String Url="jdbc:mysql://localhost:3306/parking?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai";
 	private static final String User_Name="root";
 	private static final String Pass_Word="zhao4443";
 	//输出路径
@@ -34,7 +34,7 @@ public class CodeGeneral {
 	private static final String Author="赵参谋";
 	//需要生成的表
 
-	private static String[] tables={"finance_park_income"}; //table名字
+	private static String[] tables={"parking_record"}; //table名字
 	
 
 	public static void main(String[] args) {

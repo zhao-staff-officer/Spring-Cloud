@@ -1,4 +1,4 @@
-package com.cloud.staff.apifirst.controller.java.Spring.iocdi.ioctype;
+package com.cloud.staff.apifirst.controller.java.Spring.IOC;
 
 /**
  * 构造注入

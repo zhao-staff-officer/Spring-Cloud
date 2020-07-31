@@ -1,4 +1,4 @@
-package com.cloud.staff.apifirst.controller.java.Spring.iocdi.ioctype;
+package com.cloud.staff.apifirst.controller.java.Spring.IOC;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.context.ApplicationContext;
