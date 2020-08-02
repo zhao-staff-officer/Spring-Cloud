@@ -1,0 +1,5 @@
+server:
+  port: 9030
+spring: 
+  application:
+    name: netty
