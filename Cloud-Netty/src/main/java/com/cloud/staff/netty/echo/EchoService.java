@@ -32,9 +32,9 @@ public class EchoService {
     public static void main(String[] args) {
         if(args.length != 1){
             System.out.println("Usage:"+EchoService.class.getName()+"<port>");
-            int port = Integer.parseInt(args[0]);
-            new EchoService(port).satrt();
         }
+        int port = Integer.parseInt(args[0]);
+        new EchoService(port).satrt();
     }
 
     public void satrt() {

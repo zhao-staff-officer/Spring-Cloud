@@ -8,6 +8,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.nio.ByteBuffer;
 
+
 /**
  * @ClassName EchoService
  * @Description : 功能说明
@@ -32,9 +33,9 @@ public class EchoServiceHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuffer in = (ByteBuffer) msg;
-        System.out.println("Service recived:"+in.toString());
-        ctx.write(in);
+//        ByteBuffer in = (ByteBuffer) msg;
+        System.out.println("Service recived:"+msg);
+        ctx.write(msg);
     }
 
     /**
