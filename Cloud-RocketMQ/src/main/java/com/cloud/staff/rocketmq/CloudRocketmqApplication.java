@@ -1,4 +1,4 @@
-package com.cloud.staff.sentinel;
+package com.cloud.staff.rocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class CloudSentinelApplication {
+public class CloudRocketmqApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(com.cloud.staff.rocketmq.CloudRocketmqApplication.class, args);
+		SpringApplication.run(CloudRocketmqApplication.class, args);
 	}
 
 }

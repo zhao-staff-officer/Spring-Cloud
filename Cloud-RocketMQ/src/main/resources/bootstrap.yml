@@ -1,0 +1,29 @@
+server:
+  port: 9050 #sentinel服务地址
+spring:
+  application:
+    name: rocketmq #sentinel熔断服务器
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      name: config
+      profile: management
+      label: master
+      fail-fast: true
+      username: staff
+      password: staff
+      retry:
+        max-attempts: 6 #配置重试次数，默认为6
+        multiplier: 1.1 # 间隔乘数，默认1.1
+        initial-interval: 1000  # 初始重试间隔时间，默认1000ms
+        max-interval: 2000 #最大间隔时间，默认2000ms
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://staff:staff@localhost:9000/eureka/

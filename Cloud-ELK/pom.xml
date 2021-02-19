@@ -6,10 +6,10 @@
 	<artifactId>cloud-elk</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
-	<name>cloud-elk</name>
+
+	<name>cloud-ELK</name>
 	<description>日志系统</description>
-	
+
 	<parent>
 		<groupId>com.cloud</groupId>
 	    <artifactId>Spring-Cloud</artifactId>
@@ -19,8 +19,8 @@
 
 	<dependencies>
 	    <!-- 服务应用 -->
-		<dependency>  
-	        <groupId>org.springframework.boot</groupId>  
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-web</artifactId>
 	        <!-- 默认门面模式：SLF4+Logback -->
             <!-- 去除logging默认日志系统实现 -->
@@ -36,7 +36,7 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
-		
+
 		<!-- 集成logstash -->
 		<dependency>
             <groupId>net.logstash.logback</groupId>

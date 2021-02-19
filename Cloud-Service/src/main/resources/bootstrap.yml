@@ -1,10 +1,10 @@
 server:
-  port: 9050 #服务地址
+  port: 9040 #服务地址
   tomcat:
     basedir: /mnt/tomcat/fileupload #文件上传临时目录
 spring:
   application:
-    name: apisecond
+    name: apifirst
   cloud:
     config:
       discovery:
@@ -42,4 +42,7 @@ eureka:
     eureka-server-total-connections-per-host: 50 #从Eureka客户端到每个Eureka服务主机的连接总数
     serviceUrl:
       defaultZone: http://staff:staff@localhost:9000/eureka/
+      
+    
+
       

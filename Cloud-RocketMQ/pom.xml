@@ -2,11 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.cloud.gitlabcicd</groupId>
-	<artifactId>cloud-gitlabCICD</artifactId>
+	<groupId>com.cloud.rocketmq</groupId>
+	<artifactId>cloud-rocketmq</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>Cloud-CICD</name>
-	<description>gitlab持续集成</description>
+	<packaging>jar</packaging>
+
+	<name>Cloud-RocketMQ</name>
+	<description>rocketmq</description>
 
 	<parent>
 		<groupId>com.cloud</groupId>
@@ -15,15 +17,24 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
-
 	<dependencies>
+		 <!-- 服务应用 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-web</artifactId>
+	    </dependency>
+		<!-- 注冊中心客戶段 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+        <!-- 健康监控 -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,14 +42,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
