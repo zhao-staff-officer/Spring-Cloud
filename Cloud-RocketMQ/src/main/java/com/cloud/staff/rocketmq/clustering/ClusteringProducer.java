@@ -19,7 +19,7 @@ public class ClusteringProducer {
         producer.setNamesrvAddr("192.168.33.21:9876");
         producer.start();
         for (int i=0;i<10;i++){
-            Message message = new Message("TopicTest",("广播消息"+i).getBytes());
+            Message message = new Message("TopicTest",("集群消费消息"+i).getBytes());
             producer.send(message);
         }
     }
