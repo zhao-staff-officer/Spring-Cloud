@@ -1,7 +1,0 @@
-turbine:
-  aggregator:
-    cluster-config: default
-  app-config: apifirst,apisecond #指定监控服务
-  clusterNameExpression: new String("default")
-  instanceUrlSuffix: 
-    default: /actuator/hystrix.stream

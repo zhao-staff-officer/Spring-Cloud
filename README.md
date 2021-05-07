@@ -69,7 +69,6 @@ spring-cloud技术孵化实验
   - RabbitMQ
   - RocketMQ
   - flumn
-  - >**kafka重平衡**
 ### 数据库
   - Mysql
   - MongoDB

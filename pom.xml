@@ -26,6 +26,8 @@
 		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
 	</properties>
 
+
+
     <!-- 指定子项目 -->
 	<modules>
 	  <module>Cloud-Eureka</module>
@@ -46,19 +48,6 @@
 	</modules>
 
 	<!-- 指定中央仓库 -->
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>Releases</name>
-			<url>http://47.108.156.154:7005/repository/maven-releases/</url>
-		</repository>
-
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Snapshot</name>
-			<url>http://47.108.156.154:7005/repository/maven-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<!-- 指定版本 -->
 	<dependencyManagement>
