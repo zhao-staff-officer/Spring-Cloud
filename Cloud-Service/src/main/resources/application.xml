@@ -17,7 +17,7 @@
       lazy-init：ApplicationContext实现的默认行为就是在启动时将所有 singleton bean进行实例化。lazy-init可以延迟初始化，设置lazy-init="true"使得Ioc容器在第一次需要bean的时候进行实例化
       bean实例化-factory-method：默认无参构造，静态工厂，实例工厂
     -->
-   <bean id="ApplicationDemoEnity" class="com.cloud.staff.apifirst.controller.java.Spring.IOC.create.ApplicationDemoEntity" scope="singleton"
+   <bean id="ApplicationDemoEnity" class="com.cloud.staff.demo.Spring.IOC.create.ApplicationDemoEntity" scope="singleton"
          init-method="initMenthod" lazy-init="true" factory-method="createStaticBean">
    </bean>
 
@@ -28,7 +28,7 @@
          value:它能赋的值是基本数据类型和 String 类型
          ref:它能赋的值是其他 bean 类型，且必须是在配置文件中配置过的 bean
     -->
-    <bean id="ApplicationDemoEnity1" class="com.cloud.staff.apifirst.controller.java.Spring.IOC.create.ApplicationDemoEntity" scope="singleton">
+    <bean id="ApplicationDemoEnity1" class="com.cloud.staff.demo.Spring.IOC.create.ApplicationDemoEntity" scope="singleton">
         <constructor-arg name="name" value="zhangsan"></constructor-arg>
         <constructor-arg name="age" value="18"></constructor-arg>
     </bean>
@@ -36,7 +36,7 @@
     <!--Setter方法注入
        通过bean标签的子标签property来完成，且需要在在类中指定setter方法
     -->
-    <bean id="ApplicationDemoEnity2" class="com.cloud.staff.apifirst.controller.java.Spring.IOC.create.ApplicationDemoEntity" scope="singleton">
+    <bean id="ApplicationDemoEnity2" class="com.cloud.staff.demo.Spring.IOC.create.ApplicationDemoEntity" scope="singleton">
         <property name="name" value="lisi"></property>
         <property name="age"  value="19"></property>
     </bean>
@@ -44,6 +44,6 @@
     <!--p空间注入
        p名称注入是set方法的一种简写方式，首先需引入p命名空间
     -->
-    <bean id="ApplicationDemoEnity3" class="com.cloud.staff.apifirst.controller.java.Spring.IOC.create.ApplicationDemoEntity" p:name="p空间" p:age="20"></bean>
+    <bean id="ApplicationDemoEnity3" class="com.cloud.staff.demo.Spring.IOC.create.ApplicationDemoEntity" p:name="p空间" p:age="20"></bean>
 
 </beans>
