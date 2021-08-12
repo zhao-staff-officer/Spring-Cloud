@@ -27,13 +27,11 @@
 	        <artifactId>spring-boot-starter-web</artifactId>
 	    </dependency>
 	    <!-- 服务注册与发现 -->
-	    <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2.2.1.RELEASE</version>
-        </dependency>
-
-
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+			<version>2.2.4.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
