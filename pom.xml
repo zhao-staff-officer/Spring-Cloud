@@ -44,6 +44,7 @@
 	  <module>Cloud-GitlabCICD</module>
 	  <module>Cloud-RabbitMQ</module>
 	  <module>Cloud-RocketMQ</module>
+	  <module>Cloud-Mysql</module>
 	</modules>
 
 	<!-- 指定中央仓库 -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>flex-flex_wrap(设置子元素换行)</title>
+		<style>
+			div{
+				display: flex;
+				width: 400px;
+				height: 300px;
+				background-color: pink;
+				flex-direction: row;
+				/* 默认不换行，如果装不开，会缩小子元数宽度放在父元数 */
+				flex-wrap: nowrap;
+				flex-wrap: wrap;
+			}
+			div span{
+				width: 150px;
+				height: 100px;
+				background-color: purple;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+		</div>
+	</body>
+</html>

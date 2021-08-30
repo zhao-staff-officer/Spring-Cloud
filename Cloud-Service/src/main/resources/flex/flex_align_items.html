@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>align_items设置侧轴排序方式（单行）</title>
+		<style>
+			div{
+				display: flex;
+				width: 800px;
+				height: 300px;
+				background-color: pink;
+				/* 主轴居中对齐 */
+				justify-content: center;
+				/* align_items侧轴居中 */
+				align-items: center;
+				/* 拉伸 */
+				align-items: stretch;
+			}
+			div span{
+				width: 150px;
+				/* height: 100px; */
+				background-color: purple;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+	</body>
+</html>

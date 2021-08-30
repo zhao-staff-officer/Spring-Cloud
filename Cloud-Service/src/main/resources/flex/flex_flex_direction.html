@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>flex_direction</title>
+		<style>
+			div{
+				display: flex;
+				width: 800px;
+				height: 300px;
+				background-color: pink;
+				/* 默认主轴未X轴 */
+				/* flex-direction: row; */
+				/* flex-direction: row-reverse; */
+				flex-direction: column;/* 
+				flex-direction: column-reverse; */
+				/* flex-direction: inherit; */
+				/* flex-direction: initial; */
+			}
+			div span{
+				width: 150px;
+				height: 100px;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>justify_content</title>
+		<style>
+			div{
+				display: flex;
+				width: 800px;
+				height: 300px;
+				background-color: pink;
+				flex-direction: row;
+				/* 从头排序 */
+				/* justify-content: flex-start; */
+				/* 从尾部排序 */
+				justify-content: flex-end;
+				/* 居中对齐 */
+				justify-content: center;
+				/* 平分空间 */
+				justify-content: space-around;
+				/* 平分中间空间 */
+				justify-content: space-between;
+				/* justify-content: space-evenly; */
+			}
+			div span{
+				width: 150px;
+				height: 100px;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+		</div>
+	</body>
+</html>
