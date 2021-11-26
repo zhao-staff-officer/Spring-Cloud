@@ -1,13 +1,13 @@
-package com.cloud.mysql;
+package com.cloud.cola;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MysqlApplication {
+public class ColaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MysqlApplication.class, args);
+        SpringApplication.run(ColaApplication.class, args);
     }
 
 }
