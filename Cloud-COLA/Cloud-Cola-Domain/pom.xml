@@ -28,6 +28,16 @@
             <artifactId>cola-component-extension-starter</artifactId>
             <version>4.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.cloud.cola.client</groupId>
+            <artifactId>Cloud-Cola-Client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.9</version>
+        </dependency>
     </dependencies>
 
     <build>
