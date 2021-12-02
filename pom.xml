@@ -46,6 +46,7 @@
 	  <module>Cloud-RocketMQ</module>
 	  <module>Cloud-Mysql</module>
 	  <module>Cloud-Hadoop</module>
+	  <module>Cloud-Cola</module>
 	</modules>
 
 	<!-- 指定中央仓库 -->
