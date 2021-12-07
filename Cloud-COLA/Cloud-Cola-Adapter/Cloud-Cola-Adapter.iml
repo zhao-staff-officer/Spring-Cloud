@@ -26,7 +26,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Cloud-Cola-Application" />
-    <orderEntry type="module" module-name="Cloud-Cola-Client" />
+    <orderEntry type="module" module-name="Cloud-Cola-Facade" />
     <orderEntry type="library" name="Maven: com.alibaba.cola:cola-component-dto:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />

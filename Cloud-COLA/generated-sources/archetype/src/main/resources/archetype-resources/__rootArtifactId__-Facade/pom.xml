@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.cloud.cola.client</groupId>
-    <artifactId>Cloud-Cola-Client</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>${groupId}.facade</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
     <packaging>jar</packaging>
 
-    <name>Cloud-Cola-Client</name>
+    <name>${artifactId}</name>
     <description>cola学习文档</description>
 
     <parent>
-        <groupId>com.cloud.cola</groupId>
-        <artifactId>Cloud-Cola</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}</artifactId>
+        <version>${version}</version>
     </parent>
 
     <dependencies>

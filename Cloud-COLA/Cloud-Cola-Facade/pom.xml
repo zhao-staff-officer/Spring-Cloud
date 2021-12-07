@@ -2,12 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cloud.cola.Application</groupId>
-    <artifactId>Cloud-Cola-Application</artifactId>
+
+    <groupId>com.cloud.cola.facade</groupId>
+    <artifactId>Cloud-Cola-Facade</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Cloud-Cola-Application</name>
+    <name>Cloud-Cola-Facade</name>
     <description>cola学习文档</description>
 
     <parent>
@@ -17,20 +18,19 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>com.cloud.cola.facade</groupId>
-            <artifactId>Cloud-Cola-Facade</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.cloud.cola.infrastructure</groupId>
-            <artifactId>Cloud-Cola-Infrastructure</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>com.alibaba.cola</groupId>
-            <artifactId>cola-component-catchlog-starter</artifactId>
+            <artifactId>cola-component-dto</artifactId>
             <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
         </dependency>
     </dependencies>
 
