@@ -44,8 +44,7 @@ public class EchoService {
        try{
          //创建ServerBootStrap
            ServerBootstrap bootstrap = new ServerBootstrap();
-           bootstrap
-                   .group(group)
+           bootstrap.group(group)
                    //指定NIO传输Channel
                    .channel(NioServerSocketChannel.class)
                    //使用指定的端口设置套接地址

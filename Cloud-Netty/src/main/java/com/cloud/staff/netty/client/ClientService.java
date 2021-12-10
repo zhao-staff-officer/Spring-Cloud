@@ -29,6 +29,16 @@ public class ClientService {
         this.port=port;
     }
 
+    public static void main(String[] args) throws InterruptedException {
+        if (args.length != 2) {
+            System.err.println( "Usage: " + ClientService.class.getSimpleName() + " <host> <port>");
+            return;
+        }
+        String host = args[0];
+        int port = Integer.parseInt(args[1]);
+        new ClientService(host, port).start();
+    }
+
     public void start() throws InterruptedException {
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
         try{
@@ -39,7 +49,7 @@ public class ClientService {
                     .remoteAddress(new InetSocketAddress(host,port))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
-                        public void initChannel(SocketChannel ch)throws Exception {
+                        protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new ClientServiceHandler());
                         }
                     });
@@ -50,14 +60,6 @@ public class ClientService {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        if (args.length != 2) {
-            System.err.println( "Usage: " + ClientService.class.getSimpleName() + " <host> <port>");
-            return;
-        }
-        String host = args[0];
-        int port = Integer.parseInt(args[1]);
-        new ClientService(host, port).start();
-    }
+
 
 }

@@ -1,12 +1,12 @@
 package com.cloud.staff.netty.echo;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-
-import java.nio.ByteBuffer;
+import io.netty.util.CharsetUtil;
 
 
 /**
@@ -33,13 +33,13 @@ public class EchoServiceHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-//        ByteBuffer in = (ByteBuffer) msg;
-        System.out.println("Service recived:"+msg);
+        ByteBuf in = (ByteBuf) msg;
+        System.out.println("Service received:"+in.toString(CharsetUtil.UTF_8));
         ctx.write(msg);
     }
 
     /**
-     *
+     * 当前批量读取中最后一条消息
      * @param ctx
      */
     @Override
@@ -48,6 +48,11 @@ public class EchoServiceHandler extends ChannelInboundHandlerAdapter {
                 .addListener(ChannelFutureListener.CLOSE);
     }
 
+    /**
+     * 异常消息
+     * @param ctx
+     * @param cause
+     */
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx,Throwable cause) {
         cause.printStackTrace();
