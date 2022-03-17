@@ -7,6 +7,8 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
@@ -48,20 +50,26 @@ public class TimeServer {
     private class ChildrenChannelHandler extends ChannelInitializer<SocketChannel>{
         @Override
         protected void initChannel(SocketChannel socketChannel) throws Exception {
+            socketChannel.pipeline().addLast(new LineBasedFrameDecoder(1024));
+            socketChannel.pipeline().addLast(new StringDecoder());
             socketChannel.pipeline().addLast(new TimeServerHandler());
         }
     }
 
     private class TimeServerHandler extends ChannelInboundHandlerAdapter{
 
+        private int counter;
+
         @Override
         public void channelRead(ChannelHandlerContext ctx,Object msg) throws Exception {
-            ByteBuf buf = (ByteBuf) msg;
-            byte[] req = new byte[buf.readableBytes()];
-            buf.readBytes(req);
-            String body = new String(req,"UTF-8");
-            System.out.println("the time server receive order:" + body);
+//            ByteBuf buf = (ByteBuf) msg;
+//            byte[] req = new byte[buf.readableBytes()];
+//            buf.readBytes(req);
+//            String body = new String(req,"UTF-8").substring(0,req.length-System.getProperty("line.separator").length());
+            String body = (String) msg;
+            System.out.println("the time server receive order:" + body +";the counter is:" + ++counter);
             String currentTime = "QUERY TIME ORDER".equals(body)? new Date(System.currentTimeMillis()).toString():"BAD ORDER";
+            currentTime = currentTime +System.getProperty("line.separator");
             ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
             ctx.write(resp);
         }

@@ -7,6 +7,8 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 
 public class TimeClient {
 
@@ -30,6 +32,8 @@ public class TimeClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel socketChannel) throws Exception {
+                            socketChannel.pipeline().addLast(new LineBasedFrameDecoder(1024));
+                            socketChannel.pipeline().addLast(new StringDecoder());
                             socketChannel.pipeline().addLast(new TimeClientHandler());
                         }
                     });
@@ -44,26 +48,31 @@ public class TimeClient {
 
     private class TimeClientHandler extends ChannelInboundHandlerAdapter{
 
-        private final ByteBuf msg;
+        private int counter;
+        private byte[] req;
 
         public TimeClientHandler() {
-            byte[] req  = "QUERY TIME ORDER".getBytes();
-            msg = Unpooled.buffer(req.length);
-            msg.writeBytes(req);
+            req  = ("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
         }
 
         @Override
         public void channelActive(ChannelHandlerContext ctx) throws Exception {
-            ctx.writeAndFlush(msg);
+            ByteBuf msg = null;
+            for(int i =0;i<100;i++){
+                msg = Unpooled.buffer(req.length);
+                msg.writeBytes(req);
+                ctx.writeAndFlush(msg);
+            }
         }
 
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-            ByteBuf buf = (ByteBuf) msg;
-            byte[] req = new byte[buf.readableBytes()];
-            buf.readBytes(req);
-            String body = new String (req,"UTF-8");
-            System.out.println("Now is:"+body);
+//            ByteBuf buf = (ByteBuf) msg;
+//            byte[] req = new byte[buf.readableBytes()];
+//            buf.readBytes(req);
+//            String body = new String (req,"UTF-8");
+            String body= (String) msg;
+            System.out.println("Now is:"+body+";the counter is :"+ ++counter);
         }
 
         @Override
