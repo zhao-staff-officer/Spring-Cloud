@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class CloudSentinelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(com.cloud.staff.rocketmq.CloudRocketmqApplication.class, args);
+//		SpringApplication.run(com.cloud.staff.rocketmq.CloudRocketmqApplication.class, args);
 	}
 
 }
