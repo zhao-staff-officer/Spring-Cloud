@@ -50,5 +50,10 @@ Netty 是一款异步的事件驱动的网络应用程序框架，支持快速�
   - LineBaseFrameDecode(特殊字符\n、\r\n作为结束标识)
   - DelimiterFrameDecode(特殊字符-分隔符作为流结束标识解码)
   - FixLengthFrameDecode(定长解码)
-## Netty编码    
+## Netty编解码  
+  - MessagePack 字节编解码  
+    - MessageToMessageDecoder（解码）
+    - MessageToByteEncoder （编码）
+    - LengthFieldBaseFrameDecode (在解码前处理字段长度)
+    - LengthFieldPrepender(在编码前增加字段长度)
     

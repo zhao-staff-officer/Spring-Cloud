@@ -1,15 +1,33 @@
-package com.cloud.staff.netty_messagepack;
+package com.cloud.staff.netty_messgepack_lengthfield;
 
+import com.cloud.staff.netty_messagepack.MsgpackDecoder;
+import com.cloud.staff.netty_messagepack.MsgpackEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
- * message_pack 序列化
+ * 在MessagePack-解码-之前增加LengthFileBasedDecode,用于处理半包消息，
+ * 这样后面的MsgpackDecoder接收到的永远是整包消息。
+ *
+ *  +--------+---------------+      +--------------+
+ *  |  0x00c | 'HELLO-WORLD' | ->   |‘HELLO-WORLD’ |
+ *  +--------+---------------+      +--------------+
+ *
+ *
+ * 在MessagePack-编码-之前增加LengthFieldPrepender,它将在ByteBuf 之前
+ * 增加2个字节的消息长度字段
+ * +--------------+    +--------+---------------+
+ * |‘HELLO-WORLD’ | -> |  0x00c | 'HELLO-WORLD' |
+ * +--------------+    +--------+---------------+
+ *
+ *
  */
 public class MsgPackEchoService {
 
@@ -38,7 +56,10 @@ public class MsgPackEchoService {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            socketChannel.pipeline().addLast(
+                                    new LengthFieldBasedFrameDecoder(65535,0,2,0,2));
                             socketChannel.pipeline().addLast("msgpack decoder", new MsgpackDecoder());
+                            socketChannel.pipeline().addLast(new LengthFieldPrepender(2));
                             socketChannel.pipeline().addLast("msgpack encoder", new MsgpackEncoder());
                             socketChannel.pipeline().addLast(new MsgEchoServerHandler());
                         }
