@@ -1,0 +1,11 @@
+syntax ="proto3";
+
+option java_package = "com.cloud.staff.netty_protobuf.protobufbean";
+option java_outer_classname = "SubscribeRespProto";
+
+message SubscribeResp{
+
+  int32 subReqId = 1;
+  int32 respCode = 2;
+  string desc =3;
+}
