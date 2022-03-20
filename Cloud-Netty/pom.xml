@@ -19,7 +19,7 @@
 	</parent>
 
 	<properties>
-		<protobuf.version>3.15.0</protobuf.version>
+		<protobuf.version>3.16.1</protobuf.version>
 	</properties>
 
 	<dependencies>
