@@ -9,24 +9,14 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
+import io.netty.handler.codec.protobuf.ProtobufDecoder;
+import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
+import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
- * 在MessagePack-解码-之前增加LengthFileBasedDecode,用于处理半包消息，
- * 这样后面的MsgpackDecoder接收到的永远是整包消息。
- *
- *  +--------+---------------+      +--------------+
- *  |  0x00c | 'HELLO-WORLD' | ->   |‘HELLO-WORLD’ |
- *  +--------+---------------+      +--------------+
- *
- *
- * 在MessagePack-编码-之前增加LengthFieldPrepender,它将在ByteBuf 之前
- * 增加2个字节的消息长度字段
- * +--------------+    +--------+---------------+
- * |‘HELLO-WORLD’ | -> |  0x00c | 'HELLO-WORLD' |
- * +--------------+    +--------+---------------+
  *
  *
  */
@@ -57,9 +47,13 @@ public class ProtoBufEchoService {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+
                             socketChannel.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-                            socketChannel.pipeline().addLast(new MsgpackDecoder());
-                            socketChannel.pipeline().addLast(new MsgpackEncoder());
+                            socketChannel.pipeline().addLast(new ProtobufDecoder(SubscribeReqProto.SubscribeReq.getDefaultInstance()));
+
+                            socketChannel.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
+                            socketChannel.pipeline().addLast(new ProtobufEncoder());
+
                             socketChannel.pipeline().addLast(new ProtoBufEchoServerHandler());
                         }
                     });
@@ -74,6 +68,7 @@ public class ProtoBufEchoService {
 
     public class ProtoBufEchoServerHandler extends ChannelInboundHandlerAdapter {
 
+        @Override
         public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
             System.out.println("注入链接" + ctx.channel().id().toString());
             ctx.fireChannelRegistered();
@@ -82,14 +77,25 @@ public class ProtoBufEchoService {
 
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-            String body =  msg.toString();
-            System.out.println("service receive the msgpack message" + msg);
-            ctx.writeAndFlush(body);
+            SubscribeReqProto.SubscribeReq req = (SubscribeReqProto.SubscribeReq) msg;
+            if("Lilinfeng".equalsIgnoreCase(req.getUserName())){
+                System.out.println("Service accept client subscribe req :[" + req.toString()+"]");
+                ctx.writeAndFlush(resp(req.getSubReqId()));
+            }
         }
 
         @Override
         public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)throws Exception {
             cause.printStackTrace();
+        }
+
+
+        private SubscribeRespProto.SubscribeResp resp(int subReqId){
+            SubscribeRespProto.SubscribeResp.Builder  builder = SubscribeRespProto.SubscribeResp.newBuilder();
+            builder.setSubReqId(subReqId);
+            builder.setRespCode(0);
+            builder.setDesc("Netty book order success,3 days later ,sent to the designated address");
+            return builder.build();
         }
 
 

@@ -10,21 +10,15 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
+import io.netty.handler.codec.protobuf.ProtobufDecoder;
+import io.netty.handler.codec.protobuf.ProtobufEncoder;
+import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
+import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 在MessagePack-解码-之前增加LengthFileBasedDecode,用于处理半包消息，
- * 这样后面的MsgpackDecoder接收到的永远是整包消息。
- *
- *  +--------+---------------+      +--------------+
- *  |  0x00c | 'HELLO-WORLD' | ->   |‘HELLO-WORLD’ |
- *  +--------+---------------+      +--------------+
- *
- *
- * 在MessagePack-编码-之前增加LengthFieldPrepender,它将在ByteBuf 之前
- * 增加2个字节的消息长度字段
- * +--------------+    +--------+---------------+
- * |‘HELLO-WORLD’ | -> |  0x00c | 'HELLO-WORLD' |
- * +--------------+    +--------+---------------+
  *
  *
  */
@@ -53,11 +47,13 @@ public class ProtoBufEchoClient {
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(
-                                    new LengthFieldBasedFrameDecoder(65535,0,2,0,2));
-                            socketChannel.pipeline().addLast("msgpack decoder", new MsgpackDecoder());
-                            socketChannel.pipeline().addLast(new LengthFieldPrepender(2));
-                            socketChannel.pipeline().addLast("msgpack encoder", new MsgpackEncoder());
+
+                            socketChannel.pipeline().addLast(new ProtobufVarint32FrameDecoder());
+                            socketChannel.pipeline().addLast(new ProtobufDecoder(SubscribeRespProto.SubscribeResp.getDefaultInstance()));
+
+                            socketChannel.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
+                            socketChannel.pipeline().addLast(new ProtobufEncoder());
+
                             socketChannel.pipeline().addLast(new MsgEchoClientHandler(8));
                         }
                     });
@@ -78,9 +74,8 @@ public class ProtoBufEchoClient {
 
         @Override
         public void channelActive(ChannelHandlerContext ctx) throws Exception {
-            UserInfo[] infos = userInfo();
-            for (UserInfo infoE : infos) {
-                ctx.write(infoE);
+            for (int i=0,j=10;i<j;i++) {
+                ctx.write(subReq(i));
             }
             ctx.flush();
             System.out.println("------------------send-over---------------------");
@@ -88,8 +83,7 @@ public class ProtoBufEchoClient {
 
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-            System.out.println("client receive the msgpack message:" + msg);
-            ctx.write(msg);
+            ctx.flush();
         }
 
         @Override
@@ -97,16 +91,17 @@ public class ProtoBufEchoClient {
             cause.printStackTrace();
         }
 
-        private UserInfo[] userInfo() {
-            UserInfo[] userInfos = new UserInfo[sendNumber];
-            UserInfo userInfo = null;
-            for (int i = 0; i < sendNumber; i++) {
-                userInfo = new UserInfo();
-                userInfo.setUserId(i);
-                userInfo.setUserName("ABCDEFG---->" + i);
-                userInfos[i] = userInfo;
-            }
-            return userInfos;
+        private SubscribeReqProto.SubscribeReq subReq(int i){
+            SubscribeReqProto.SubscribeReq.Builder builder = SubscribeReqProto.SubscribeReq.newBuilder();
+            builder.setSubReqId(i);
+            builder.setUserName("Lilinfeng");
+            builder.setProductName("Netty book fro protobuf");
+
+            List<String> address = new ArrayList<>();
+            address.add("Nanjing YuHuaTai");
+            address.add("Beijing LiuLiChang");
+            builder.addAllAddress(address);
+            return builder.build();
         }
     }
 
