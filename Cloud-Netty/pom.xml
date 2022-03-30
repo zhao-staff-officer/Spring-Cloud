@@ -36,6 +36,18 @@
 			<version>0.6.12</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.jboss.marshalling</groupId>
+			<artifactId>jboss-marshalling-serial</artifactId>
+			<!-- <version>2.0.0.Final</version> --> <!-- 需要JDK1.8支持 -->
+			<version>1.4.11.Final</version> <!-- 需要JDK1.7支持 -->
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.marshalling</groupId>
+			<artifactId>jboss-marshalling</artifactId>
+			<version>1.4.11.Final</version>
+		</dependency>
+
 		<!--	protobuf	-->
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
@@ -54,14 +66,14 @@
 
 
 	<build>
-		<extensions>
-			<!--引入操作系统os设置的属性插件,否则${os.detected.classifier} 操作系统版本会找不到 -->
-			<extension>
-				<groupId>kr.motd.maven</groupId>
-				<artifactId>os-maven-plugin</artifactId>
-				<version>1.5.0.Final</version>
-			</extension>
-		</extensions>
+<!--		<extensions>-->
+<!--			&lt;!&ndash;引入操作系统os设置的属性插件,否则${os.detected.classifier} 操作系统版本会找不到 &ndash;&gt;-->
+<!--			<extension>-->
+<!--				<groupId>kr.motd.maven</groupId>-->
+<!--				<artifactId>os-maven-plugin</artifactId>-->
+<!--				<version>1.5.0.Final</version>-->
+<!--			</extension>-->
+<!--		</extensions>-->
 
 		<plugins>
 			<plugin>
@@ -71,28 +83,28 @@
 					<mainClass>com.cloud.staff.netty.echo.EchoService</mainClass>
 				</configuration>
 			</plugin>
-			<plugin>
-   				<groupId>org.xolstice.maven.plugins</groupId>
-  				<artifactId>protobuf-maven-plugin</artifactId>
-   				<version>0.5.1</version>
-   				<configuration>
-      				<protocArtifact>
-         				com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
-      				</protocArtifact>
-      				<pluginId>grpc-java</pluginId>
-      				<pluginArtifact>
-						io.grpc:protoc-gen-grpc-java:1.14.0:exe:${os.detected.classifier}
-      				</pluginArtifact>
-   				</configuration>
-   				<executions>
-      				<execution>
-         				<goals>
-            				<goal>compile</goal>
-            				<goal>compile-custom</goal>
-        				 </goals>
-      				</execution>
-   				</executions>
-			</plugin>
+<!--			<plugin>-->
+<!--   				<groupId>org.xolstice.maven.plugins</groupId>-->
+<!--  				<artifactId>protobuf-maven-plugin</artifactId>-->
+<!--   				<version>0.5.1</version>-->
+<!--   				<configuration>-->
+<!--      				<protocArtifact>-->
+<!--         				com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}-->
+<!--      				</protocArtifact>-->
+<!--      				<pluginId>grpc-java</pluginId>-->
+<!--      				<pluginArtifact>-->
+<!--						io.grpc:protoc-gen-grpc-java:1.14.0:exe:${os.detected.classifier}-->
+<!--      				</pluginArtifact>-->
+<!--   				</configuration>-->
+<!--   				<executions>-->
+<!--      				<execution>-->
+<!--         				<goals>-->
+<!--            				<goal>compile</goal>-->
+<!--            				<goal>compile-custom</goal>-->
+<!--        				 </goals>-->
+<!--      				</execution>-->
+<!--   				</executions>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 

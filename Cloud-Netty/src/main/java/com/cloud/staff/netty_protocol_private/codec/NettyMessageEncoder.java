@@ -1,0 +1,59 @@
+package com.cloud.staff.netty_protocol_private.codec;
+
+import com.cloud.staff.netty_protocol_private.codec.MarshallingEncoder;
+import com.cloud.staff.netty_protocol_private.msg.NettyMessage;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.MessageToMessageEncoder;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+public class NettyMessageEncoder extends MessageToMessageEncoder<NettyMessage> {
+
+    MarshallingEncoder marshallingEncoder;
+
+    public NettyMessageEncoder() throws IOException {
+        marshallingEncoder = new MarshallingEncoder();
+    }
+
+    @Override
+    protected void encode(ChannelHandlerContext ctx, NettyMessage msg, List<Object> out) throws Exception {
+        if(msg ==null || msg.getHeader() ==null){
+            throw  new Exception("The encode message is null");
+        }
+
+        ByteBuf sendBuf = Unpooled.buffer();
+        sendBuf.writeInt(msg.getHeader().getCrcCode());
+        sendBuf.writeInt(msg.getHeader().getLength());
+        sendBuf.writeLong(msg.getHeader().getSessionId());
+        sendBuf.writeByte(msg.getHeader().getType());
+        sendBuf.writeByte(msg.getHeader().getPriority());
+
+        //附件大小
+        sendBuf.writeInt(msg.getHeader().getAttach().size());
+
+        for(Iterator<Map.Entry<String,Object>> iterator = msg.getHeader().getAttach().entrySet().iterator();iterator.hasNext();){
+            Map.Entry<String,Object> entry = iterator.next();
+            String k = entry.getKey();Object v = entry.getValue();
+            byte[] key = k.getBytes(StandardCharsets.UTF_8);
+            sendBuf.writeInt(key.length);
+            sendBuf.writeBytes(key);
+            marshallingEncoder.encode(v,sendBuf);
+        }
+
+        if(msg.getBody() !=null){
+            marshallingEncoder.encode(msg.getBody(),sendBuf);
+        }else{
+            sendBuf.writeInt(0);
+        }
+
+        sendBuf.setInt(4,sendBuf.readableBytes());
+
+
+    }
+}

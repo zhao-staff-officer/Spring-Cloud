@@ -11,7 +11,7 @@ public class NettyMessageHeader {
     /**
      * 消息验证码
      */
-    private int crcCode = 0xabef0101;
+    private int crcCode = 0xadaf0105;
 
     /**
      * 消息长度
