@@ -1,19 +1,16 @@
 package com.cloud.staff.netty_protocol_private.codec;
 
-import com.cloud.staff.netty_protocol_private.codec.MarshallingEncoder;
 import com.cloud.staff.netty_protocol_private.msg.NettyMessage;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.MessageToMessageEncoder;
+import io.netty.handler.codec.MessageToByteEncoder;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
-public class NettyMessageEncoder extends MessageToMessageEncoder<NettyMessage> {
+public class NettyMessageEncoder extends MessageToByteEncoder<NettyMessage> {
 
     MarshallingEncoder marshallingEncoder;
 
@@ -22,12 +19,12 @@ public class NettyMessageEncoder extends MessageToMessageEncoder<NettyMessage> {
     }
 
     @Override
-    protected void encode(ChannelHandlerContext ctx, NettyMessage msg, List<Object> out) throws Exception {
+    protected void encode(ChannelHandlerContext ctx, NettyMessage msg, ByteBuf sendBuf) throws Exception {
         if(msg ==null || msg.getHeader() ==null){
             throw  new Exception("The encode message is null");
         }
 
-        ByteBuf sendBuf = Unpooled.buffer();
+//        ByteBuf sendBuf = Unpooled.buffer();
         sendBuf.writeInt(msg.getHeader().getCrcCode());
         sendBuf.writeInt(msg.getHeader().getLength());
         sendBuf.writeLong(msg.getHeader().getSessionId());
@@ -53,7 +50,5 @@ public class NettyMessageEncoder extends MessageToMessageEncoder<NettyMessage> {
         }
 
         sendBuf.setInt(4,sendBuf.readableBytes());
-
-
     }
 }
