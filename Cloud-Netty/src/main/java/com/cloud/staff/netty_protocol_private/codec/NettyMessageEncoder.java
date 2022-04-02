@@ -57,6 +57,6 @@ public class NettyMessageEncoder extends MessageToByteEncoder<NettyMessage> {
             sendBuf.writeInt(0);
         }
         //写入消息长度
-        sendBuf.setInt(4,sendBuf.readableBytes()-8);
+        sendBuf.setInt(4,sendBuf.readableBytes());
     }
 }

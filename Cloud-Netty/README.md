@@ -71,10 +71,23 @@ Netty 是一款异步的事件驱动的网络应用程序框架，支持快速�
    - MessagePack 字节编解码  
      - MessageToMessageDecoder（解码） 
      - MessageToByteEncoder （编码）  
-     - LengthFieldBaseFrameDecode (在解码前处理字段长度)  
+     - LengthFieldBaseFrameDecode (在解码前处理字段长度)
+       * maxFrameLength  
+             最大长度
+       * lengthFieldOffset   
+            长度记录开始下脚标
+       * lengthFieldLength   
+            记录长度,读取出来即内容长度
+       * lengthAdjustment   
+            长度调整值,如内容长度为lengthFieldLength内容值后续即设置为0,
+            如lengthFieldLength内容值包含整个长度做调整减去(lengthFieldOffset+lengthFieldLength)
+        * initialBytesToStrip  
+            忽略长度    
      - LengthFieldPrepender(在编码前增加字段长度)  
    - protobuf (编解码)
-
+   
+   
+    
 ## Netty多协议封装   
    - 1.1 HTTP 协议  
    - 1.2 socket 协议

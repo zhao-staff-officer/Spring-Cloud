@@ -42,7 +42,7 @@ public class WorkServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new NettyMessageDecoder(1024*1024,4,4));
+                        ch.pipeline().addLast(new NettyMessageDecoder(1024*1024,4,4,-8,0));
                         ch.pipeline().addLast(new NettyMessageEncoder());
                         ch.pipeline().addLast(new LoginAuthRespHandler());
                         ch.pipeline().addLast(new HeartBeatRespHandler());
