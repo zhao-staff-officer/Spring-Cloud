@@ -10,6 +10,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ *  增加index
+ * +---------------------------------------------------------------------+
+ * + CrcCode | length | sessionId  |  type  |  priority  |  attach.size  |……
+ * +    4    |  4     |    8       |    1   |     1      |      4        |……
+ * +  32b    |  32b   |    64b     |        |            |      32b      |……
+ * +---------------------------------------------------------------------+
+ */
 public class NettyMessageEncoder extends MessageToByteEncoder<NettyMessage> {
 
     MarshallingEncoder marshallingEncoder;
@@ -48,7 +56,7 @@ public class NettyMessageEncoder extends MessageToByteEncoder<NettyMessage> {
         }else{
             sendBuf.writeInt(0);
         }
-
-        sendBuf.setInt(4,sendBuf.readableBytes());
+        //写入消息长度
+        sendBuf.setInt(4,sendBuf.readableBytes()-8);
     }
 }

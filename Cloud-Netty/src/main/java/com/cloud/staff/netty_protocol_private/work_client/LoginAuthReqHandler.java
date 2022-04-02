@@ -24,6 +24,7 @@ public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter {
             if(loginResult !=(byte) 0){
                 ctx.close();
             }else {
+                System.out.println("认证通过");
                 ctx.fireChannelRead(msg);
             }
         }else {
