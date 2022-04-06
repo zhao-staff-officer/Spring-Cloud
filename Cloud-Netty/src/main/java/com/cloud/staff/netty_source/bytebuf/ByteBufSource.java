@@ -19,6 +19,10 @@ public class ByteBufSource {
 
     public static void main(String[] args) {
         ByteBuf byteBuf = Unpooled.buffer();
+        System.out.println(byteBuf.capacity());
+        System.out.println(byteBuf.maxCapacity());
         byteBuf.writeInt(1);
+        byte[] b = byteBuf.array();
+        System.out.println(String.valueOf(b[3]));
     }
 }
