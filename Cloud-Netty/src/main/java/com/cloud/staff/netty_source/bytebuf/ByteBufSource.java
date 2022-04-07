@@ -1,6 +1,7 @@
 package com.cloud.staff.netty_source.bytebuf;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.buffer.Unpooled;
 
 /**
@@ -18,11 +19,16 @@ import io.netty.buffer.Unpooled;
 public class ByteBufSource {
 
     public static void main(String[] args) {
-        ByteBuf byteBuf = Unpooled.buffer();
-        System.out.println(byteBuf.capacity());
-        System.out.println(byteBuf.maxCapacity());
-        byteBuf.writeInt(1);
-        byte[] b = byteBuf.array();
+        //默认堆缓存
+        ByteBuf heapByteBuf = Unpooled.buffer();
+        System.out.println(heapByteBuf.capacity());
+        System.out.println(heapByteBuf.maxCapacity());
+        heapByteBuf.writeInt(1);
+        byte[] b = heapByteBuf.array();
         System.out.println(String.valueOf(b[3]));
+        //非堆缓存
+        ByteBuf directByteBuf = Unpooled.directBuffer();
+        //
+        PooledByteBufAllocator pooledByteBuf = PooledByteBufAllocator.DEFAULT;
     }
 }

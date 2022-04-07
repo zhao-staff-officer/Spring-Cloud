@@ -3,44 +3,46 @@
   <ID>JAVA</ID>
   <OriginalElement>io.netty.buffer.UnpooledByteBufAllocator</OriginalElement>
   <nodes>
-    <node x="336.0" y="160.0">io.netty.buffer.UnpooledByteBufAllocator</node>
-    <node x="63.5" y="80.0">io.netty.buffer.AbstractByteBuf</node>
-    <node x="93.0" y="0.0">io.netty.buffer.ByteBuf</node>
-    <node x="17.0" y="320.0">io.netty.buffer.UnpooledUnsafeHeapByteBuf</node>
-    <node x="370.0" y="0.0">io.netty.buffer.ByteBufAllocator</node>
-    <node x="341.0" y="80.0">io.netty.buffer.AbstractByteBufAllocator</node>
-    <node x="0.0" y="160.0">io.netty.buffer.AbstractReferenceCountedByteBuf</node>
-    <node x="40.5" y="240.0">io.netty.buffer.UnpooledHeapByteBuf</node>
+    <node x="342.0" y="310.0">io.netty.buffer.UnpooledByteBufAllocator</node>
+    <node x="64.0" y="103.0">io.netty.buffer.AbstractByteBuf</node>
+    <node x="96.0" y="0.0">io.netty.buffer.ByteBuf</node>
+    <node x="24.0" y="412.0">io.netty.buffer.UnpooledUnsafeHeapByteBuf</node>
+    <node x="373.0" y="0.0">io.netty.buffer.ByteBufAllocator</node>
+    <node x="341.0" y="103.0">io.netty.buffer.AbstractByteBufAllocator</node>
+    <node x="0.0" y="206.0">io.netty.buffer.AbstractReferenceCountedByteBuf</node>
+    <node x="48.0" y="309.0">io.netty.buffer.UnpooledHeapByteBuf</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="io.netty.buffer.UnpooledUnsafeHeapByteBuf" target="io.netty.buffer.UnpooledHeapByteBuf" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.AbstractReferenceCountedByteBuf" target="io.netty.buffer.AbstractByteBuf">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledHeapByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.UnpooledHeapByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledByteBufAllocator" target="io.netty.buffer.AbstractByteBufAllocator" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.UnpooledByteBufAllocator" target="io.netty.buffer.AbstractByteBufAllocator">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
-    <edge source="io.netty.buffer.AbstractReferenceCountedByteBuf" target="io.netty.buffer.AbstractByteBuf" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.AbstractByteBufAllocator" target="io.netty.buffer.ByteBufAllocator">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
-    <edge source="io.netty.buffer.AbstractByteBufAllocator" target="io.netty.buffer.ByteBufAllocator" relationship="REALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.AbstractByteBuf" target="io.netty.buffer.ByteBuf">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
-    <edge source="io.netty.buffer.AbstractByteBuf" target="io.netty.buffer.ByteBuf" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="io.netty.buffer.UnpooledUnsafeHeapByteBuf" target="io.netty.buffer.UnpooledHeapByteBuf">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="26.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="286.0" y="212.5" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="291.0" y="232.5" />
+  <SelectedNodes>
+    <node>io.netty.buffer.UnpooledByteBufAllocator</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
