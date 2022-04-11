@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.nio.channels.spi.AbstractSelector</OriginalElement>
+  <nodes>
+    <node x="18.0" y="0.0">java.nio.channels.spi.AbstractSelector</node>
+    <node x="-289.0" y="165.0">java.nio.channels.SelectionKey</node>
+    <node x="0.0" y="160.0">sun.nio.ch.WindowsSelectorImpl</node>
+    <node x="31.5" y="80.0">sun.nio.ch.SelectorImpl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sun.nio.ch.WindowsSelectorImpl" target="sun.nio.ch.SelectorImpl" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="sun.nio.ch.SelectorImpl" target="java.nio.channels.spi.AbstractSelector" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="101.0" y="132.5" />
+  <SelectedNodes>
+    <node>java.nio.channels.SelectionKey</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
