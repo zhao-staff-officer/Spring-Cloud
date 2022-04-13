@@ -3,93 +3,92 @@
   <ID>JAVA</ID>
   <OriginalElement>io.netty.buffer.ByteBuf</OriginalElement>
   <nodes>
-    <node x="316.0" y="206.0">io.netty.buffer.AbstractByteBuf</node>
-    <node x="268.0" y="515.0">io.netty.buffer.UnpooledUnsafeDirectByteBuf</node>
-    <node x="771.4285714285714" y="412.0">io.netty.buffer.PooledByteBuf</node>
-    <node x="226.1904761904762" y="0.0">io.netty.util.ReferenceCounted</node>
-    <node x="976.0" y="515.0">io.netty.buffer.PooledUnsafeDirectByteBuf</node>
-    <node x="528.0" y="618.0">io.netty.buffer.PooledUnsafeHeapByteBuf</node>
-    <node x="348.0" y="103.0">io.netty.buffer.ByteBuf</node>
-    <node x="0.0" y="515.0">io.netty.buffer.UnpooledUnsafeHeapByteBuf</node>
-    <node x="552.0" y="515.0">io.netty.buffer.PooledHeapByteBuf</node>
-    <node x="292.0" y="412.0">io.netty.buffer.UnpooledDirectByteBuf</node>
-    <node x="422.1904761904762" y="0.0">java.lang.Comparable</node>
-    <node x="252.0" y="309.0">io.netty.buffer.AbstractReferenceCountedByteBuf</node>
-    <node x="756.0" y="515.0">io.netty.buffer.PooledDirectByteBuf</node>
-    <node x="24.0" y="412.0">io.netty.buffer.UnpooledHeapByteBuf</node>
+    <node x="327.5" y="160.0">io.netty.buffer.AbstractByteBuf</node>
+    <node x="0.0" y="400.0">io.netty.buffer.UnpooledUnsafeDirectByteBuf</node>
+    <node x="754.4142857142858" y="320.0">io.netty.buffer.PooledByteBuf</node>
+    <node x="229.89285714285717" y="0.0">io.netty.util.ReferenceCounted</node>
+    <node x="983.0" y="400.0">io.netty.buffer.PooledUnsafeDirectByteBuf</node>
+    <node x="534.5" y="480.0">io.netty.buffer.PooledUnsafeHeapByteBuf</node>
+    <node x="357.0" y="80.0">io.netty.buffer.ByteBuf</node>
+    <node x="281.0" y="400.0">io.netty.buffer.UnpooledUnsafeHeapByteBuf</node>
+    <node x="558.0" y="400.0">io.netty.buffer.PooledHeapByteBuf</node>
+    <node x="23.0" y="320.0">io.netty.buffer.UnpooledDirectByteBuf</node>
+    <node x="429.89285714285717" y="0.0">java.lang.Comparable</node>
+    <node x="264.0" y="240.0">io.netty.buffer.AbstractReferenceCountedByteBuf</node>
+    <node x="768.0" y="400.0">io.netty.buffer.PooledDirectByteBuf</node>
+    <node x="304.5" y="320.0">io.netty.buffer.UnpooledHeapByteBuf</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="io.netty.buffer.PooledByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="847.4285714285714" y="387.0" />
-      <point x="498.6666666666667" y="387.0" />
-      <point x="98.66666666666669" y="26.5" />
+    <edge source="io.netty.buffer.PooledByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="845.4142857142858" y="295.0" />
+      <point x="409.5" y="295.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.PooledHeapByteBuf" target="io.netty.buffer.PooledByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="644.0" y="490.0" />
-      <point x="796.7619047619048" y="490.0" />
-      <point x="-50.66666666666663" y="26.5" />
+    <edge source="io.netty.buffer.UnpooledUnsafeHeapByteBuf" target="io.netty.buffer.UnpooledHeapByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.ByteBuf" target="java.lang.Comparable">
-      <point x="26.0" y="-26.5" />
-      <point x="426.0" y="78.0" />
-      <point x="486.1904761904762" y="78.0" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.PooledUnsafeHeapByteBuf" target="io.netty.buffer.PooledHeapByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledDirectByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.ByteBuf" target="io.netty.util.ReferenceCounted" relationship="REALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="409.5" y="55.0" />
+      <point x="319.89285714285717" y="55.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledHeapByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="124.0" y="387.0" />
-      <point x="301.3333333333333" y="387.0" />
-      <point x="-98.66666666666669" y="26.5" />
+    <edge source="io.netty.buffer.UnpooledDirectByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="130.5" y="295.0" />
+      <point x="409.5" y="295.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.AbstractReferenceCountedByteBuf" target="io.netty.buffer.AbstractByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.ByteBuf" target="java.lang.Comparable" relationship="REALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="409.5" y="55.0" />
+      <point x="512.8928571428571" y="55.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.ByteBuf" target="io.netty.util.ReferenceCounted">
-      <point x="-26.0" y="-26.5" />
-      <point x="374.0" y="78.0" />
-      <point x="314.1904761904762" y="78.0" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.UnpooledHeapByteBuf" target="io.netty.buffer.AbstractReferenceCountedByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledUnsafeDirectByteBuf" target="io.netty.buffer.UnpooledDirectByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.PooledHeapByteBuf" target="io.netty.buffer.PooledByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="653.0" y="375.0" />
+      <point x="845.4142857142858" y="375.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.PooledDirectByteBuf" target="io.netty.buffer.PooledByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="856.0" y="490.0" />
-      <point x="847.4285714285714" y="490.0" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.UnpooledUnsafeDirectByteBuf" target="io.netty.buffer.UnpooledDirectByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.PooledUnsafeHeapByteBuf" target="io.netty.buffer.PooledHeapByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.PooledUnsafeDirectByteBuf" target="io.netty.buffer.PooledByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="1103.5" y="375.0" />
+      <point x="845.4142857142858" y="375.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.AbstractByteBuf" target="io.netty.buffer.ByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.AbstractReferenceCountedByteBuf" target="io.netty.buffer.AbstractByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.UnpooledUnsafeHeapByteBuf" target="io.netty.buffer.UnpooledHeapByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="0.0" y="26.5" />
+    <edge source="io.netty.buffer.AbstractByteBuf" target="io.netty.buffer.ByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.buffer.PooledUnsafeDirectByteBuf" target="io.netty.buffer.PooledByteBuf">
-      <point x="0.0" y="-26.5" />
-      <point x="1100.0" y="490.0" />
-      <point x="898.0952380952381" y="490.0" />
-      <point x="50.66666666666663" y="26.5" />
+    <edge source="io.netty.buffer.PooledDirectByteBuf" target="io.netty.buffer.PooledByteBuf" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="865.5" y="375.0" />
+      <point x="845.4142857142858" y="375.0" />
+      <point x="0.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="612.0" y="335.5" />
+  <settings layout="Hierarchic" zoom="0.9364951768488746" showDependencies="false" x="612.0" y="255.0" />
   <SelectedNodes>
-    <node>io.netty.buffer.AbstractByteBuf</node>
     <node>io.netty.buffer.UnpooledUnsafeDirectByteBuf</node>
     <node>io.netty.buffer.PooledByteBuf</node>
     <node>io.netty.util.ReferenceCounted</node>
