@@ -11,28 +11,28 @@
   </nodes>
   <notes />
   <edges>
-    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelOutboundInvoker" relationship="INTERFACE_GENERALIZATION">
+    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelOutboundInvoker">
       <point x="0.0" y="-15.0" />
       <point x="359.5" y="55.0" />
       <point x="115.5" y="55.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelInboundInvoker" relationship="INTERFACE_GENERALIZATION">
+    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelInboundInvoker">
       <point x="0.0" y="-15.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.channel.ChannelPipeline" target="java.lang.Iterable" relationship="INTERFACE_GENERALIZATION">
+    <edge source="io.netty.channel.DefaultChannelPipeline" target="io.netty.channel.ChannelPipeline">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.ChannelPipeline" target="java.lang.Iterable">
       <point x="0.0" y="-15.0" />
       <point x="359.5" y="55.0" />
       <point x="555.0" y="55.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="io.netty.channel.DefaultChannelPipeline" target="io.netty.channel.ChannelPipeline" relationship="REALIZATION">
-      <point x="0.0" y="-15.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="311.0" y="95.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="300.0" y="106.5" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
