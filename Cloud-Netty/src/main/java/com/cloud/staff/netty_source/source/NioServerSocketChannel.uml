@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>io.netty.channel.socket.nio.NioServerSocketChannel</OriginalElement>
+  <nodes>
+    <node x="281.0173611111111" y="80.0">io.netty.channel.Channel</node>
+    <node x="256.96180555555554" y="240.0">io.netty.channel.socket.ServerSocketChannel</node>
+    <node x="51.517361111111086" y="0.0">io.netty.util.AttributeMap</node>
+    <node x="0.0" y="80.0">io.netty.util.DefaultAttributeMap</node>
+    <node x="219.5173611111111" y="0.0">io.netty.channel.ChannelOutboundInvoker</node>
+    <node x="137.46180555555554" y="404.0">io.netty.channel.socket.nio.NioServerSocketChannel</node>
+    <node x="470.5173611111111" y="0.0">java.lang.Comparable</node>
+    <node x="44.96180555555554" y="240.0">io.netty.channel.nio.AbstractNioChannel</node>
+    <node x="57.46180555555554" y="160.0">io.netty.channel.AbstractChannel</node>
+    <node x="14.461805555555543" y="322.0">io.netty.channel.nio.AbstractNioMessageChannel</node>
+    <node x="279.46180555555554" y="160.0">io.netty.channel.ServerChannel</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.netty.util.DefaultAttributeMap" target="io.netty.util.AttributeMap" relationship="REALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="99.0" y="55.0" />
+      <point x="88.51736111111109" y="55.0" />
+      <point x="-37.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.AbstractChannel" target="io.netty.util.DefaultAttributeMap" relationship="GENERALIZATION">
+      <point x="-41.75" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.nio.AbstractNioChannel" target="io.netty.channel.AbstractChannel" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.ServerChannel" target="io.netty.channel.Channel" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="354.96180555555554" y="135.0" />
+      <point x="362.0173611111111" y="135.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.nio.AbstractNioMessageChannel" target="io.netty.channel.nio.AbstractNioChannel" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.socket.nio.NioServerSocketChannel" target="io.netty.channel.socket.ServerSocketChannel" relationship="REALIZATION">
+      <point x="55.25" y="-15.0" />
+      <point x="303.21180555555554" y="378.0" />
+      <point x="354.96180555555554" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.AbstractChannel" target="io.netty.channel.Channel" relationship="REALIZATION">
+      <point x="41.75" y="-15.0" />
+      <point x="182.71180555555554" y="135.0" />
+      <point x="308.0173611111111" y="135.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.socket.ServerSocketChannel" target="io.netty.channel.ServerChannel" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.Channel" target="io.netty.channel.ChannelOutboundInvoker" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.socket.nio.NioServerSocketChannel" target="io.netty.channel.nio.AbstractNioMessageChannel" relationship="GENERALIZATION">
+      <point x="-55.25" y="-15.0" />
+      <point x="192.71180555555554" y="378.0" />
+      <point x="140.96180555555554" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.Channel" target="java.lang.Comparable" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="335.0173611111111" y="55.0" />
+      <point x="553.5173611111111" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="io.netty.channel.Channel" target="io.netty.util.AttributeMap" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="335.0173611111111" y="55.0" />
+      <point x="162.5173611111111" y="55.0" />
+      <point x="37.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="799.0" y="217.0" />
+  <SelectedNodes>
+    <node>io.netty.channel.socket.nio.NioServerSocketChannel</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
