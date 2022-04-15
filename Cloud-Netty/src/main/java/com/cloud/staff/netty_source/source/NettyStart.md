@@ -1,4 +1,12 @@
-# Netty源码-Version:
+# Netty源码解读
+
+
+
+
+
+[TOC]
+
+
 
 ## 1.0  服务端启动项
 
@@ -39,7 +47,7 @@ public class NettyService {
                     //添加日志输出
                     .handler(new LoggingHandler(LogLevel.INFO))
                     //添加channel-pinple
-                    .childHandler(new ChannelInitializer<SocketChannel>() { //这里在
+                    .childHandler(new ChannelInitializer<SocketChannel>() { 
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new NettyMessageDecoder(1024*1024,4,4,-8,0));
@@ -106,7 +114,7 @@ private ChannelFuture doBind(final SocketAddress localAddress) {
 final ChannelFuture initAndRegister() {
         Channel channel = null;
         try {
-            //实例化channel对象，得到NioServerSocketChannel对象,这里面构造函数事情做得多呀!
+            //实例化channel对象，得到NioServerSocketChannel对象,这里面构造函数事情做多呀!
             channel = channelFactory.newChannel(); 
             //初始化channel配置参数
             init(channel);
@@ -174,10 +182,14 @@ public class NioServerSocketChannel extends AbstractNioMessageChannel implements
 
     /**
      * Create a new instance
-     */
-    //创建NioServerSocketChannel对象
-    // 1:创建selector轮询器()
-    // 2:实例化 ChannelId = newId(); unsafe = newUnsafe(); ChannelPipeline = newChannelPipeline();
+     * 这里都是初始化数据，有点多
+     * L 1.获取默认selector轮询器，返回NioServerSocketChannelImpl
+     * L 2.初始化 NioServerSocket
+     *   L 2.1 初始化 Id = newId();unsafe = newUnsafe(); Pipeline = newChannelPipeline();
+     *	 L 2.2 设置 当前channelReadInterstOps 操作位 1>>4=16 接收链接
+     *	 L 2.3 设置 selectableChannle阻塞
+     * L 3.设置 NioServerSocketChannel.config配置参数
+     */	
     public NioServerSocketChannel() {
         this(newSocket(DEFAULT_SELECTOR_PROVIDER));
     }
