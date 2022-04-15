@@ -47,6 +47,7 @@
 	  <module>Cloud-Mysql</module>
 	  <module>Cloud-Hadoop</module>
 	  <module>Cloud-Cola</module>
+		<module>Cloud-Zookeper</module>
 	</modules>
 
 	<!-- 指定中央仓库 -->
