@@ -3,6 +3,7 @@ package com.cloud.zookeeper.dao;
 import com.cloud.zookeeper.entity.TestEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -24,8 +25,10 @@ public interface TestDao {
 
     /**
      * 查询所有用户
+     * 关闭mybatis缓存
      * @return
      */
+    @Options(flushCache = Options.FlushCachePolicy.TRUE)
     @Select("select * from user")
     List<TestEntity> queryAll();
 
@@ -34,7 +37,7 @@ public interface TestDao {
      * @param testEntity
      * @return
      */
-    @Insert("insert into user(id,user_name,user_pwd) values (#{id},#{userName},#{userPwd})")
+    @Insert("insert into user(user_name,user_pwd) values (#{userName},#{userPwd})")
     int insert(TestEntity testEntity);
 
 
