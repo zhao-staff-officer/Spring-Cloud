@@ -66,11 +66,11 @@ public class NettyService {
 }
 ```
 
-### 1.1  bind()方法
+### 1.1  doBind()方法
 
 ```java
 private ChannelFuture doBind(final SocketAddress localAddress) {
-    	//初始化注册，将channnel注册到Evenloop上
+    	//1.1.1初始化注册，将channnel注册到Evenloop上
         final ChannelFuture regFuture = initAndRegister();
         final Channel channel = regFuture.channel();
         if (regFuture.cause() != null) {
@@ -108,15 +108,15 @@ private ChannelFuture doBind(final SocketAddress localAddress) {
 
 ```
 
-#### 1.1.1 initAndRegister()方法
+#### 1.1.1 initAndRegister()
 
 ```java
 final ChannelFuture initAndRegister() {
         Channel channel = null;
         try {
-            //实例化channel对象，得到NioServerSocketChannel对象,这里面构造函数事情做多呀!
+            //1.1.1.1实例化channel对象，得到NioServerSocketChannel对象,这里面构造函数事情做多呀!
             channel = channelFactory.newChannel(); 
-            //初始化channel配置参数
+            //1.1.1.2初始化channel.config/handler配置参数
             init(channel);
         } catch (Throwable t) {
             if (channel != null) {
@@ -128,7 +128,7 @@ final ChannelFuture initAndRegister() {
             // as the Channel is not registered yet we need to force the usage of the GlobalEventExecutor
             return new DefaultChannelPromise(new FailedChannel(), GlobalEventExecutor.INSTANCE).setFailure(t);
         }
-
+		//1.1.1.3
         ChannelFuture regFuture = config().group().register(channel);
         if (regFuture.cause() != null) {
             if (channel.isRegistered()) {
@@ -151,7 +151,7 @@ final ChannelFuture initAndRegister() {
     }
 ```
 
-##### 1.1.1.1 newChannel()
+##### 1.1.1.1 newChannel() 
 
 ```java
 public class NioServerSocketChannel extends AbstractNioMessageChannel implements io.netty.channel.socket.ServerSocketChannel {
@@ -243,7 +243,7 @@ public abstract class SelectorProvider{
             currentChildOptions = childOptions.entrySet().toArray(EMPTY_OPTION_ARRAY);
         }
         final Entry<AttributeKey<?>, Object>[] currentChildAttrs = childAttrs.entrySet().toArray(EMPTY_ATTRIBUTE_ARRAY);
-
+		//注入处理类,ChannelInitializer有@Share注解共用channel类
         p.addLast(new ChannelInitializer<Channel>() {
             @Override
             public void initChannel(final Channel ch) {
@@ -263,5 +263,11 @@ public abstract class SelectorProvider{
             }
         });
     }
+```
+
+##### 1.1.1.3 register(channel)
+
+```java
+
 ```
 

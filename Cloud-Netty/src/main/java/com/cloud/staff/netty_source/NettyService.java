@@ -5,15 +5,15 @@ import com.cloud.staff.netty_protocol_private.codec.NettyMessageEncoder;
 import com.cloud.staff.netty_protocol_private.work_server.HeartBeatRespHandler;
 import com.cloud.staff.netty_protocol_private.work_server.LoginAuthRespHandler;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+
+import java.util.Iterator;
+import java.util.Map;
 
 public class NettyService {
 
@@ -43,6 +43,8 @@ public class NettyService {
                     })
             ;
             ChannelFuture f  = bootstrap.bind(8080).sync();
+            Iterator<Map.Entry<String, ChannelHandler>> init = f.channel().pipeline().iterator();
+            ChannelHandler channelHandler = f.channel().pipeline().get("ServerBootstrap$ServerBootstrapAcceptor#0");
             f.channel().closeFuture().sync();
         }catch (Exception e){
             e.printStackTrace();
