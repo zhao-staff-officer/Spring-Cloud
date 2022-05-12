@@ -37,6 +37,13 @@
             <version>1.2.66</version>
         </dependency>
 
+        <!--   zookeeper     -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

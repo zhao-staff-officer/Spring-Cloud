@@ -1,6 +1,6 @@
-package com.cloud.zookeeper.dao;
+package com.cloud.zookeeper.ACID.dao;
 
-import com.cloud.zookeeper.entity.TestEntity;
+import com.cloud.zookeeper.ACID.entity.TestEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;

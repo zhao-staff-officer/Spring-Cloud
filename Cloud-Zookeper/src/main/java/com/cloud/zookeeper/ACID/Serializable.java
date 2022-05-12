@@ -1,8 +1,8 @@
 package com.cloud.zookeeper.ACID;
 
 import com.alibaba.fastjson.JSON;
-import com.cloud.zookeeper.dao.TestDao;
-import com.cloud.zookeeper.entity.TestEntity;
+import com.cloud.zookeeper.ACID.dao.TestDao;
+import com.cloud.zookeeper.ACID.entity.TestEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.cloud.zookeeper.entity;
+package com.cloud.zookeeper.ACID.entity;
 
 /**
  * @author 赵参谋
