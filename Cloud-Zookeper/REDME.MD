@@ -212,11 +212,31 @@
 
 #### 	4.2.3 伪集群模式
 
+### 4.3 API使用
 
+#### 	4.3.1创建会话
+
+```java
+Zookeeper zookeeper = new ZooKeeper( String connectString,int sessionTimeout,Watcher watcher, boolean canBeReadOnly, HostProvider aHostProvider, ZKClientConfig clientConfig)
+```
+
+```java
+Zookeeper zookeeper = new ZooKeeper(String connectString, int sessionTimeout,Watcher watcher,long sessionId, byte[] sessionPasswd, boolean canBeReadOnly,HostProvider aHostProvider,ZKClientConfig clientConfig)
+```
 
    
 
+| 参数                    | 说明                                                         |
+| :---------------------- | ------------------------------------------------------------ |
+| connectString           | zk链接地址，多个逗号分隔：ep:127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002/app/a |
+| sessionTimeout          | 会话超时时间                                                 |
+| watcher                 | 通知事件                                                     |
+| canBeReadOnly           | 客户端是否只读，如果设置只读则不能写入数据                   |
+| sessionId/sessionPasswd | 标识同一客户端，在初次创建客户端后会返回会话ID与会话钥匙，可使用同一客户端。 |
+
    
+
+#### 	4.3.2 创建节点
 
 
 
