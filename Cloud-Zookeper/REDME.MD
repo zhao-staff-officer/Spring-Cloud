@@ -206,15 +206,17 @@
    
 ### 4.2 zookeeper部署
 
-#### 	4.2.1 单机模式
+​	部署文档15196332744@163.com
 
-#### 	4.2.2 集群模式
+#### 		4.2.1 单机模式
 
-#### 	4.2.3 伪集群模式
+#### 		4.2.2 集群模式
+
+#### 		4.2.3 伪集群模式
 
 ### 4.3 API使用
 
-#### 	4.3.1创建会话
+#### 		4.3.1创建会话
 
 ```java
 Zookeeper zookeeper = new ZooKeeper( String connectString,int sessionTimeout,Watcher watcher, boolean canBeReadOnly, HostProvider aHostProvider, ZKClientConfig clientConfig)
@@ -236,7 +238,7 @@ Zookeeper zookeeper = new ZooKeeper(String connectString, int sessionTimeout,Wat
 
    
 
-#### 	4.3.2 创建节点
+#### 		4.3.2 创建节点
 
 
 
