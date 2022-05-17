@@ -44,4 +44,9 @@ public class ZookeeperConfig {
      * 最大重试次数
      */
     private Integer maxRetries;
+
+    /**
+     * 工作空间
+     */
+    private String nameSpace;
 }
