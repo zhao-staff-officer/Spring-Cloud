@@ -16,3 +16,4 @@ zookeeper:
   baseSleepTimeMs: 1000
   maxRetries: 3
   connectionTimeoutMs: 50000
+  nameSpace: zk-worker-space
